@@ -7,6 +7,7 @@ Title_Name=诺禾致源基因组组装结题报告
 
 [bars]
 # 主要设置左侧的栏目，栏目名字=栏目图片相对路径,子栏目1名字,子栏目2名字(没有子栏目则为标记为"None"). 注意逗号是用英文输入的逗号
+# 主栏目="主栏目按钮图片路径","子栏目1","子栏目2","子栏目N..."
 概述="static/image/sidebar_icon_active_1.png","None"
 背景介绍="static/image/sidebar_icon_active_2.png","Nanopore 测序简介","10X Genomics 测序简介","Hi-C 技术简介"
 建库测序="static/image/sidebar_icon_active_3.png","Nanopore 建库测序","10X Genomics 建库测序","Hi-C 建库测序"
