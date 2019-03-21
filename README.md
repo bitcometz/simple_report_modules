@@ -32,4 +32,4 @@ NOTE
 华为云的例子路径如下：
 /HWNAS12/RAD/zhangjinbo/01.release/00.reports/00.examples
 
-下载本页的内容，请点击右上角的绿色框(Clone or Download)
+下载本页的内容 ，请点击右上角的绿色框(Clone or Download)
