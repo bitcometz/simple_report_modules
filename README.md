@@ -16,6 +16,7 @@ F0:"static/image/p1.png","图 1 Nanopore 测序原理"
 
 T0:"Nanopore 原始数据统计"
 P0:"对Nanopore 测序得到的原始数据采用软件NanoPlot 进行质控过滤异常值，我们对 下机得到的reads 统计结果见表1，质控后的reads 的统计结果见
+
 S0:"data/wtdbg.table1.xls","表1 Nanopore原始测序数据统计"
 S0:"data/wtdbg.table2.xls","表2 Nanopore用于组装数据统计"
 
