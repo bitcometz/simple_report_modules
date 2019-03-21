@@ -1,0 +1,541 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">    
+    
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="author" content="徐彪 &lt;xubiaosunny@163.com&gt;">
+
+<title>诺禾致源基因组组装结题报告</title>
+<!-- Bootstrap core CSS -->
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<!--<link rel="stylesheet" href="static/css/bootstrap-theme.min.css">-->
+<!-- Optional Bootstrap Theme -->
+<!--<link href="data:text/css;charset=utf-8," data-href="static/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">-->
+<!-- Documentation extras -->
+<link href="./static/css/docs.min.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link href="https://cdn.bootcss.com/docsearch.js/2.2.0/docsearch.css" rel="stylesheet">
+<link href="./static/css/mydoc.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="static/css/jquery.ad-gallery.css">
+<link rel="stylesheet" type="text/css" href="static/css/font-awesome/css/font-awesome.min.css">
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="">
+<link rel="icon" href="">
+
+<style type="text/css">
+
+</style>
+
+</head>
+
+    
+    <body>
+
+        <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+            <!-- Docs page layout -->
+        <div class="container bs-docs-container">
+            <div class="row">
+                <div class="col-md-3" id="left">
+                    <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary">
+
+                        <ul class="nav bs-docs-sidenav text-right">
+    
+                        <li>
+                            <a href="#a" role="active">
+                                <img src="static/image/sidebar_icon_active_1.png">
+                                1 概述
+                            </a>        
+        
+					    </li>
+        
+                        <li>
+                            <a href="#b" role="active">
+                                <img src="static/image/sidebar_icon_active_2.png">
+                                2 背景介绍
+                            </a>        
+        
+						    <ul class="nav">            
+            
+                                <li><a href="#b_1">2.1 Nanopore 测序简介</a></li>
+                
+                                <li><a href="#b_2">2.2 10X Genomics 测序简介</a></li>
+                
+                                <li><a href="#b_3">2.3 Hi-C 技术简介</a></li>
+                
+        					</ul>          
+            
+					    </li>
+        
+                        <li>
+                            <a href="#c" role="active">
+                                <img src="static/image/sidebar_icon_active_3.png">
+                                3 建库测序
+                            </a>        
+        
+						    <ul class="nav">            
+            
+                                <li><a href="#c_1">3.1 Nanopore 建库测序</a></li>
+                
+                                <li><a href="#c_2">3.2 10X Genomics 建库测序</a></li>
+                
+                                <li><a href="#c_3">3.3 Hi-C 建库测序</a></li>
+                
+        					</ul>          
+            
+					    </li>
+        
+                        <li>
+                            <a href="#d" role="active">
+                                <img src="static/image/sidebar_icon_active_4.png">
+                                4 基因组组装
+                            </a>        
+        
+						    <ul class="nav">            
+            
+                                <li><a href="#d_1">4.1 基于Nanopore测序基因组组装</a></li>
+                
+                                <li><a href="#d_2">4.2 10X Genomics 辅助组装</a></li>
+                
+                                <li><a href="#d_3">4.3 Hi-C 辅助组装</a></li>
+                
+                                <li><a href="#d_4">4.4 二代数据纠错组装版本</a></li>
+                
+        					</ul>          
+            
+					    </li>
+        
+                        <li>
+                            <a href="#e" role="active">
+                                <img src="static/image/sidebar_icon_active_5.png">
+                                5 结果统计
+                            </a>        
+        
+						    <ul class="nav">            
+            
+                                <li><a href="#e_1">5.1 Nanopore 原始数据统计</a></li>
+                
+                                <li><a href="#e_2">5.2 组装结果统计</a></li>
+                
+                                <li><a href="#e_3">5.3 基因组碱基组成</a></li>
+                
+        					</ul>          
+            
+					    </li>
+        
+                        <li>
+                            <a href="#f" role="active">
+                                <img src="static/image/sidebar_icon_active_6.png">
+                                6 组装结果评估
+                            </a>        
+        
+						    <ul class="nav">            
+            
+                                <li><a href="#f_1">6.1 CEGMA 评估</a></li>
+                
+                                <li><a href="#f_2">6.2 BUSCO 评估</a></li>
+                
+                                <li><a href="#f_3">6.3 RNA 序列评估</a></li>
+                
+        					</ul>          
+            
+					    </li>
+        
+                        <li>
+                            <a href="#g" role="active">
+                                <img src="static/image/sidebar_icon_active_7.png">
+                                7 结论
+                            </a>        
+        
+					    </li>
+        
+                        <li>
+                            <a href="#h" role="active">
+                                <img src="static/image/sidebar_icon_active_8.png">
+                                8 分析使用主要软件
+                            </a>        
+        
+					    </li>
+        
+                        <li>
+                            <a href="#i" role="active">
+                                <img src="static/image/sidebar_icon_active_9.png">
+                                9 主要参考文献
+                            </a>        
+        
+					    </li>
+        
+                        <div  style="position:relative;left:10%;bottom:-30px;padding-right: 20px;max-width: 230px;">
+                            <a href="http://www.novogene.com/"><img src="static/image/novogene_logo.png" width="80%" style="margin-bottom: 20px"></a>
+                            <p class="text-left" style="font-size: 12px"><i class="fa fa-phone-square fa-1x" aria-hidden="true"></i>&nbsp;&nbsp;TEL：400-658-1585</p>
+                            <p class="text-left" style="font-size: 12px"><i class="fa fa-envelope-open fa-1x" aria-hidden="true"></i>&nbsp;&nbsp;E-mail：<a href="mailto:邮件地址">service@novogene.com</a></p>
+                        </div>
+
+				        </ul>
+
+			        </div>
+		        </div>
+    
+		<!--内容部分-->
+		<div class="col-md-9" role="main" id="main">
+			<!--封面-->
+
+			<p style ="text-align:left;padding-top:2%;padding-left:3%;font-size:15px">Project ID：Test20190215
+			<br/></p>
+
+			<div class="text-center" data-section-name="home" id="cover" >
+				<h2 style="padding-top: 12%">Project Name：ONT两个样品的测试报告</h2>
+				<h2>与组装结题报告模板</h2>
+
+				<br>
+				<br>
+				<br>
+
+
+                <!--<h4 style="padding-top: 10%">合同编号：XXXX<h4/>-->
+                <!--padding-top控制中间留白的大小，越大空白越大-->
+
+				<p style ="text-align:center;padding-top:16%;font-size:15px">
+				<h4 >Report Date：2019-03-13</h4>
+				<h4>项目负责：北京诺禾致源科技股份有限公司Denovo业务线</h4>
+				<!--<hr style="margin-top: 22%; height:1px;border:none;border-top:1px dashed">-->
+				</p>
+			</div>
+
+    
+        			<div class="bs-docs-section" id="content">   
+    
+                    <h3 id="a" class="page-header">1 概述</h3>
+        
+    <p class="paragraph">近年来，随着高通量测序技术的发展，三代测序逐渐成为基因组研究的新兴手段。Pacbio、Nanopore 等第三代测序技术有效的解决了二代测序读长短，无法跨过基因组高重复区域的问题。当下，Nanopore 测序技术作为三代测序的后起之秀，因其读长长、产出高、价格低的优势开始被广泛应用于测序界。该平台利用纳米孔进行实时测序，没有读长限制，可以直接读取超长片段的序列信息，得到超长的reads。</p>
+
+    <p class="paragraph">同时，随着测序新技术的不断涌现，三代测序技术，结合10X Genomics、BioNano、Hi-C 等新技术，使得基因组可以组装到Super-Scaffold 水平。</p>
+
+        <br />
+
+                    <h3 id="b" class="page-header">2 背景介绍</h3>
+        
+        <br />
+
+                    <h4 id="b_1">2.1 Nanopore 测序简介</h4>
+        
+    <p class="paragraph">Nanopore 测序即纳米孔测序，其原理是：纳米孔蛋白作为生物传感器，插入由合成聚合物形成的膜中。此外，核酸分子会与马达蛋白（Motor Protein）连接，该马达蛋白一方面对双链进行解链，使核酸单链在电泳的作用下通过特定的纳米孔蛋白，另一方面可控制DNA/RNA 分子的移动速度，保证碱基逐一地穿过纳米孔，产生稳定可靠的电信号。由于不同碱基的带电性质不同，通过检测电信号的差异就能检测出通过纳米孔的碱基类别，实现测序。</p>
+
+		<div class="content_img"><img src="static/image/p1.png" width="450"></div>
+		<h6>图 1 Nanopore 测序原理</h6>
+
+
+        <br />
+
+                    <h4 id="b_2">2.2 10X Genomics 测序简介</h4>
+        
+    <p class="paragraph">10X Genomics 的linked reads 技术本质上是将barcode 序列引入长序列片段，通过将长片段分配到不同的油滴微粒中，利用GemCode 平台对长片段序列进行扩增引入barcode 序列以及测序接头引物，然后将序列打断成适合测序大小的片段进行测序，通过barcode 序列信息追踪来自每个大片段DNA 模板的多个Reads，从而获得大片段的遗传信息。通过linked reads 结合测序组装得到的Scaffold，可搭建准确度更长的Scaffold。</p>
+
+        <br />
+
+                    <h4 id="b_3">2.3 Hi-C 技术简介</h4>
+        
+    <p class="paragraph">Chicago 技术以 DNA 的空间结构为基础，能够检测基因组区段较远但是能够因相互作用而实际接近的“远距 离”相互作用序列。此方法的核心技术就是体外 Hi-C 文库的构建，即以重组染色质为基础构建大片段文库。通过将 DNA、纯化的组蛋白以及染色质组装因子结合来重构染色质，之后用甲醛将染色质固定，利用限制酶切割后进行生物素和巯基标记，再利用连接酶对标记的末端进行连接，消化片段以去除终端的生物素核苷酸（巯基化核苷酸保护文库片段内部不被消化），由此可筛选去除内部没有生物素标记的片段，从而形成体外 Hi-C 文库。通过该技术能更好的避免生物学信号的干扰，得到基因组范围内的远距离序列信息，从而辅助基因组组装。</p>
+
+        <br />
+
+                    <h3 id="c" class="page-header">3 建库测序</h3>
+        
+        <br />
+
+                    <h4 id="c_1">3.1 Nanopore 建库测序</h4>
+        
+    <p class="paragraph">首先进行高分子量DNA 的提取并进行检测，检测合格后的基因组DNA 可以选择 是否通过Covaris g-TUBE 来打断和片段筛选。经损伤修复和加A 尾后，再在片段两端 分别连接测序接头，制备DNA 文库，如图所示。库检合格，根据文库的有效浓度及数 据产出需求使用PromethION 平台进行测序。</p>
+
+		<div class="content_img"><img src="static/image/p2.png" width="450"></div>
+		<h6>图2 Nanopore 建库测序流程图</h6>
+
+
+        <br />
+
+                    <h4 id="c_2">3.2 10X Genomics 建库测序</h4>
+        
+    <p class="paragraph">10X Genomics 的文库构建核心原理是利用Chromium 平台的微流控芯片对微量 （1ng）基因组DNA 进行精确分区，然后对每个胶珠内的特定barcode 序列和DNA 序 列进行二代测序（图3A）。 二代小片段文库构建首先将检测合格的DNA 样品通过Covaris 超声波破碎仪随机 打断成片段，经末端修复、加A 尾、加测序接头、纯化、PCR 扩增等步骤完成。构建 好的文库通过Illumina Hiseq 进行PE 测序（图3B）。</p>
+
+		<div class="content_img"><img src="static/image/p3.png" width="450"></div>
+		<h6>图3 10x建库测序流程图</h6>
+
+
+        <br />
+
+                    <h4 id="c_3">3.3 Hi-C 建库测序</h4>
+        
+    <p class="paragraph">1）用甲醛固定细胞核染色质后进行酶切，经末端修复后加入生物素标记；2）用 连接酶连接、蛋白酶 K 消化；3）将DNA 片段打断，磁珠捕获带生物素标记的DNA 片段（图5），构建文库（图6），库捡合格后通过Illumina HiSeq PE150 测序。</p>
+
+		<div class="content_img"><img src="static/image/p6b.png" width="450"></div>
+		<h6>图4 HiC文库构建流程</h6>
+
+
+        <br />
+
+                    <h3 id="d" class="page-header">4 基因组组装</h3>
+        
+        <br />
+
+                    <h4 id="d_1">4.1 基于Nanopore测序基因组组装</h4>
+        
+    <p class="paragraph">使用wtdbg2 软件进行组装，该软件直接用不进行纠错的raw reads 来组装，其组装流程 如下： （1）用Nanopore 数据进行组装，组装采用Fuzzy Bruijn Graph 算法，从reads 中选取 1024bp 的序列作为点，然后按照它们在reads 中的顺序用其他序列将点连接起来，构建 FBG 图，进而得到consensus 序列。与De Bruijn Graph 不同的是，FBG 的点更大，因 此对一些小的重复不敏感，为了解决序列错误率较高地问题，FBG 的点选用 Kmer-BIN-Mapping 等比对工具中的gapped sequence alignments 比对方法来进行比对； （2）对上一步组装结果，使用三代数据基于Racon 软件对组装结果进行校正，再用二 代数据基于Pilon 软件再次校正，从而提高结果的精确度，最终得到高质量的consensus 序列。</p>
+
+		<div class="content_img"><img src="static/image/wtdbg.asm.png" width="450"></div>
+		<h6>图5 WTDBG组装过程</h6>
+
+
+        <br />
+
+                    <h4 id="d_2">4.2 10X Genomics 辅助组装</h4>
+        
+    <p class="paragraph">10X Genomics 辅助组装我们主要使用fragScaff 软件，具体流程如下： A. 将10X Genomics 文库测序得到Linked-reads 与三代组装结果所得consensus 序 列进行比对，在原有的基础上加上linked reads 组装成super-Scaffold。 B. 对于实际距离比较近的consensus，有很多的Linked-reads 支持其连接关系；对 于实际距离比较远的consensus，则缺少Linked-reads 的支持，无法将其连接，最终得 到组装序列。</p>
+
+        <br />
+
+                    <h4 id="d_3">4.3 Hi-C 辅助组装</h4>
+        
+    <p class="paragraph">Chicago 技术辅助组装的原理是：以DNA 的空间结构为基础，检测基因组区段 较远但是能够因相互作用而实际接近的“远距离”相互作用序列，辅助初步组装的contig 进一步搭建成为染色体规模的scaffold。Chicago 辅助组装我们主要使用HiRise 软件， 组装流程如下： 1. 将 Chicago 测序 Reads 与初步组装的 contig/scaffold 序列进行比对; 2. 利用 Chicago 有效 Mapping reads 对 scaffold 序列进行分群(分到不同染色 体); 3. 将来自不同染色体的 contig/scaffold 按照正确顺序进行定向排列; 4. 将初步组装的 contig/scaffold 进一步组装到准染色体水平。</p>
+
+        <br />
+
+                    <h4 id="d_4">4.4 二代数据纠错组装版本</h4>
+        
+    <p class="paragraph">二代小片段文库构建首先将检测合格的DNA 样品通过Covaris 超声波破碎仪随机 打断成片段，经末端修复、加A 尾、加测序接头、纯化、PCR 扩增等步骤完成。构建 好的文库通过Illumina Hiseq 进行PE 测序；之后首先利用二代小片段数据与组装版本 进行bwa 比对。然后利用pilon 软件，结合比对结果，对组装版本进行纠错。</p>
+
+        <br />
+
+                    <h3 id="e" class="page-header">5 结果统计</h3>
+        
+        <br />
+
+                    <h4 id="e_1">5.1 Nanopore 原始数据统计</h4>
+        
+    <p class="paragraph">对Nanopore 测序得到的原始数据采用软件NanoPlot 进行质控过滤异常值，我们对 下机得到的reads 统计结果见表1，质控后的reads 的统计结果见表2：</p>
+
+        <h6>表1 Nanopore原始测序数据统计</h6>
+        <div class="content_table" >
+		<table class="table table-bordered table-striped table-hover" >
+        <thead><tr>
+<th style="text-align :center">Read Bases (G)</th><th style="text-align :center">Number of Reads</th><th style="text-align :center">Mean Read Length</th><th style="text-align :center">Read Length N50
+</th></tr></thead>
+<tbody><tr>
+<td style="text-align :center">5348037285</td><td style="text-align :center">573889</td><td style="text-align :center">9319</td><td style="text-align :center">15045
+</td></tr></tbody>
+</table>
+</div>
+
+        <h6>表2 Nanopore用于组装数据统计</h6>
+        <div class="content_table" >
+		<table class="table table-bordered table-striped table-hover" >
+        <thead><tr>
+<th style="text-align :center">Read Bases (G)</th><th style="text-align :center">Number of Reads</th><th style="text-align :center">Mean Read Length</th><th style="text-align :center">Read Length N50
+</th></tr></thead>
+<tbody><tr>
+<td style="text-align :center">3899991600</td><td style="text-align :center">231997</td><td style="text-align :center">16811</td><td style="text-align :center">18138
+</td></tr></tbody>
+</table>
+</div>
+
+        <br />
+
+                    <h4 id="e_2">5.2 组装结果统计</h4>
+        
+    <p class="paragraph">WTDBG组装结果如下表格:</p>
+
+        <h6>表3 WTDBG组装结果统计</h6>
+        <div class="content_table" >
+		<table class="table table-bordered table-striped table-hover" >
+        <thead><tr>
+<th style="text-align :center">Total Length</th><th style="text-align :center">Total Number</th><th style="text-align :center">Average Length</th><th style="text-align :center">Max Length</th><th style="text-align :center">N50 Length</th><th style="text-align :center">N50 Number</th><th style="text-align :center">N90 Length</th><th style="text-align :center">N90 Number
+</th></tr></thead>
+<tbody><tr>
+<td style="text-align :center">119589217</td><td style="text-align :center">260</td><td style="text-align :center">459958</td><td style="text-align :center">10426744</td><td style="text-align :center">7355929</td><td style="text-align :center">7</td><td style="text-align :center">627838</td><td style="text-align :center">26
+</td></tr></tbody>
+</table>
+</div>
+
+        <br />
+
+                    <h4 id="e_3">5.3 基因组碱基组成</h4>
+        
+        <br />
+
+                    <h3 id="f" class="page-header">6 组装结果评估</h3>
+        
+        <br />
+
+                    <h4 id="f_1">6.1 CEGMA 评估</h4>
+        
+    <p class="paragraph">CEGMA(Core Eukaryotic Genes Mapping Approach：http://korflab.ucdavis.edu/dataseda/cegma/)评估是选取存在于6 个真核模式生物中的保守基因（248 个gene）构成core gene 库，结合tblastn、genewise 和geneid 等软件对组装得到的基因组进行评估，以此评 估组装基因组的完整性。XX 物种基因组的CEGMA 评估统计结果见表6。</p>
+
+        <br />
+
+                    <h4 id="f_2">6.2 BUSCO 评估</h4>
+        
+    <p class="paragraph">BUSCO（Benchmarking Universal Single-Copy Orthologs：http://busco.ezlab.org/）评 估是使用单拷贝直系同源基因库，结合tblastn、augustus 和hmmer 等软件对组装得到 的基因组进行评估，以此评估组装基因组的完整性。XX 物种基因组的BUSCO 评估统 计结果见表7。</p>
+
+        <h6>表4 BUSCO评估结果</h6>
+        <div class="content_table" >
+		<table class="table table-bordered table-striped table-hover" >
+        <thead><tr>
+<th style="text-align :center">Species</th><th style="text-align :center">BUSCO notation assessment results
+</th></tr></thead>
+<tbody><tr>
+<td style="text-align :center">物种</td><td style="text-align :center">C: 91% [D: 8.0%], F: 3.7%, M: 4.7%, n: XX
+</td></tr></tbody>
+</table>
+</div>
+
+<p align="left">(1)Species：XX 物种；<p/>    
+    
+<p align="left">(2)D：Complete Duplicated BUSCOs; F：Fragmented BUSCOs; M：Missing BUSCOs; n：Total BUSCO groups searched.<p/>    
+    
+        <br />
+
+        <br />
+
+                    <h4 id="f_3">6.3 RNA 序列评估</h4>
+        
+        <br />
+
+                    <h3 id="g" class="page-header">7 结论</h3>
+        
+    <p class="paragraph">利用【物种】基因组XX G 测序数据，对【物种】基因组进行测序denovo 组装，组装 结果如下：contig 总长XXXMbp，contig N50 长度达到 XXKbp；scaffold 总长 XXXMbp，scaffold N50 长度达到 XXXKbp。 对组装版本进行多种方法评估，结果均显示基因组一致性、完整性及准确性均较好。</p>
+
+        <br />
+
+                    <h3 id="h" class="page-header">8 分析使用主要软件</h3>
+        
+        <br />
+
+                    <h3 id="i" class="page-header">9 主要参考文献</h3>
+        
+    <p class="paragraph">1. Eid, John, et al. Real-time DNA sequencing from single polymerase molecules. 2009, Science.</p>
+
+    <p class="paragraph">2. Lieberman-Aiden E, van Berkum N L, Williams L, et al. Comprehensive mapping of long-range interactions reveals folding principles of the human genome[J]. science, 2009, 326(5950): 289-293</p>
+
+    <p class="paragraph">3. Cock, P.J.A., Fields, C.J., Goto, N., Heuer, M.L., and Rice, P.M. (2010). The Sanger FASTQ file format for sequences with quality scores, and the Solexa/Illumina FASTQ variants. Nucleic acids research 38, 1767-1771.</p>
+
+    <p class="paragraph">4. Hansen, K.D., Brenner, S.E., and Dudoit, S. (2010). Biases in Illuminatranscriptome sequencing caused by random hexamer priming. Nucleic acids research 38, e131-e131.</p>
+
+    <p class="paragraph">5. Jiang, L., Schlesinger, F., Davis, C.A., Zhang, Y., Li, R., Salit, M., Gingeras, T.R., and Oliver, B.(2011). Synthetic spike-in standards for RNA-seq experiments. Genome research 21,1543-1551.</p>
+
+    <p class="paragraph">6. Li H, Durbin R: Fast and accurate short read alignment with Burrows-Wheeler transform. Bioinformatics 2009, 25(14):1754-1760.</p>
+
+        <br />
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="static/js/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="static/js/bootstrap.min.js"></script>
+
+<script src="./static/js/docs.min.js"></script>
+<!-- Analytics
+================================================== -->
+<!--<script src="./static/js/jquery.easing.1.3.js"></script>
+<script src="./static/js/scrollify.min.js"></script>
+<script src="./static/js/main.js"></script>-->
+<!--调至首top-->
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.ad-gallery.js"></script>
+<script type="text/javascript" src="static/js/zzsc.js"></script>
+
+		<div class="col-md-2 hidden-print" title="TOP">
+		<p><a href="report.html" target="_top">
+			<button   type="button" class="btn" style="position: fixed;top: 55px;right: 0.5%" href="report.html" target="_top"><i class="fa fa-arrow-up fa-1x" aria-hidden="true"></i></button>
+		</a></p>
+		</div>
+
+<!--<script type="text/javascript" src="static/js/html2canvas.js"></script>
+<script type="text/javascript" src="static/js/jspdf.debug.js"></script>-->
+<script>
+
+$(document).ready(function(){
+	$("#cover").css("height",$(window).height());//封面高度为屏幕高度
+	// $("img").attr("crossorigin","*");
+});
+/*在ad-gallery插件的基础上添加了图片搜索的功能
+ *实现：匹配图片文件名的开头，匹配到的图片显示，未匹配的不显示，为空则全部显示
+*/
+
+function genescarh(t){
+	// var img_list_e = t.parent().nextAll(".ad-nav").find(".ad-thumb-list");
+	var img_list_e = t.parent().nextAll(".ad-nav").find(".ad-thumb-list").find("img");
+	// console.log(t.val())
+	var reg=new RegExp("^"+t.val());
+	$(".ad-thumbs").animate({scrollLeft: '0px'}); //每次搜索将预览图置左
+	for(var i=0;i<img_list_e.length;i++){
+		var img_name = img_list_e[i].getAttribute("src").split("/").pop();
+		if(reg.test(img_name)){
+			// console.log(img_list_e[i]);
+			img_list_e[i].style.display="inline";
+		}else{
+			// console.log(img_list_e[i]);
+			img_list_e[i].style.display="none";
+		}
+	}
+}
+
+function download_pdf(){
+	// var pdf = new jsPDF('p','pt','a4');
+	// pdf.internal.scaleFactor = 1;
+	// var options = {
+	// 		pagesplit: true
+	// };
+
+	// //$('.pdf-wrapper')
+	// pdf.addHTML($("#main"),options,function() {
+	// 	pdf.save('web1111.pdf');
+	// });
+}
+/*@打印pdf函数，使用浏览器打印功能
+ *将显示不全的表格和导航图片都显示出来
+*/
+
+function myprint(){
+	// console.log($("table.table"));
+	//
+	for(var i=0;i<$("table.table").length;i++){
+		$('table.table')[i].setAttribute('style','TABLE-LAYOUT:fixed;WORD-BREAK:break-all');
+	}
+	$(".ad-gallery").each(function(){
+		$(this).addClass("hidden-print");
+		if (!$(this).find('.ad-my').length){
+			// console.log($(this));
+			$(this).after('<div class="ad-my"></div>');
+			$(this).children(".ad-nav").find('img').each(function(){
+				$(".ad-my").append('<img src=' + this.src + '>');
+			})
+		}
+
+	});
+	window.print();
+	$("table.table").each(function(){
+		$(this).removeAttr('style');
+	});
+	$(".ad-my").remove();
+}
+
+</script>
+
+</body> 
+    
+</html>    
+    
