@@ -28,3 +28,6 @@ NOTE
 相关的表动的图片和表格放在输出目录的data上，因为报告生成的时候需要载入这些图片表格
 
 最终的结果会放在Reports文件夹下
+
+华为云的例子路径如下：
+/HWNAS12/RAD/zhangjinbo/01.release/00.reports/00.examples
