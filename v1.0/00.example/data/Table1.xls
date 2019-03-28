@@ -1,0 +1,3 @@
+Sample	Total Bases	Active channels	Number of reads	Median read length	Read length N50	Median read quality	>Q7 number(%)
+SampleA	16,547,274,697.0	2,626.0	1,405,147.0	11,270.0	19,037.0	6.9	664469(47.3%)
+SampleB	1,805,290,266.0	2,276.0	191,701.0	7,235.0	16,754.0	5.2	19702(10.3%)

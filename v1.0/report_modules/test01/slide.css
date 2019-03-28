@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+
+/* 整体设置 */
+html {
+    margin:0px;
+    padding:0px;
+}
+body {
+    background:#FF9;
+    font-size:62.5%;
+}
+
+/* 页面标题 */
+h1 {
+    font-family:"隶书","宋体","Times New Roman", Times, serif;
+    font-size:5em;
+    text-align:center;
+    color:red;
+    margin:10px auto;
+}
+
+/* 图片容器的样式定义 */
+.slider-container {
+    margin:0px auto;
+    background:#FFF;
+    width:800px;
+}
+
+/* 图片列表的样式定义 */
+ul {
+    list-style-type:none;
+}
+.slider-wrapper {
+    margin:0px;
+    padding:0px;
+    position:relative;
+    height:450px;
+    width:100%;
+    border:5px solid  #69F;
+    overflow:hidden;
+    z-index:80;
+    box-shadow:8px 8px 4px #999999;
+}
+.slider-wrapper li {
+    display:none;
+}
+li.slide-first {
+    display:block;
+}
+.slider-wrapper li img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    max-width:100%;
+    height: auto;
+}
+
+/* 图片标题的样式定义 */
+.caption {
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    padding:10px;
+    background:rgba(0,0,0,0.6);
+    transform:translateY(100%);
+    -ms-transform:translateY(100%);     /* IE 9 */
+    -moz-transform:translateY(100%);     /* Firefox */
+    -webkit-transform:translateY(100%); /* Safari 和 Chrome */
+    -o-transform:translateY(100%);     /* Opera */
+}
+.slider-wrapper li:hover .caption {
+    transform:translateY(0%);
+    -ms-transform:translateY(0%);     /* IE 9 */
+    -moz-transform:translateY(0%);     /* Firefox */
+    -webkit-transform:translateY(0%); /* Safari 和 Chrome */
+    -o-transform:translateY(0%);     /* Opera */
+    transition:all 0.1s ease-in;
+    -ms-transition:all 0.1s ease-in; /* IE 9 */
+    -moz-transition:all 0.1s ease-in; /* Firefox */
+    -webkit-transition:all 0.1s ease-in; /* Safari 和 Chrome */
+    -o-transition:all 0.1s ease-in; /* Opera */
+}
+.caption-title {
+    font-size:1.6em;
+    color:#6FF;
+    font-weight:700;
+    line-height:2em;
+}
+
+.caption-title a {
+    color:#FFF;
+    font-size:2em;
+    text-decoration:none;
+
+}
+.caption-title a:hover {
+    background:red;
+
+}
+.caption-title a:active {
+    background:blue;
+}
+
+/* 提示信息 */
+p {
+    color:black;
+    font-size:2em;
+    text-align:center;
+    margin:50px 0;
+    line-height:2em;
+    margin:20px auto;
+}
+
+/* 作者按钮 */
+.author a {
+    font-family:"宋体";
+    color:white;
+    text-decoration:none;
+    font-size:2em;
+    border-radius:10px;
+    padding:5px 7px;
+    background:linear-gradient(#33C,#6CC);
+}
+.author a:hover {
+    background:linear-gradient(#FCF,#000);
+}
+/* 控制按钮 */
+.slider-controls {
+    text-align: center;
+    margin-top: 15px;
+}
+.slider-controls li {
+    background:#FC6;
+    /*border-radius: 50%;*/
+    display:inline-block;
+    height: 12px;
+    width: 12px;
+    margin: 0px 4px;
+    cursor: pointer;
+}
+.slider-controls li.active {
+    background: red;
+}

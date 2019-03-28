@@ -1,0 +1,3 @@
+Sample	Top 5 read_lengths (mean_basecall_quality; reads_id)
+SampleA	103499 (6.6; c4a40871-3586-4ae6-bb73-6b3ccc90d9f3)<br />101708 (6.8; e414fc51-f10e-4817-830e-712b86189d8c)<br />96305 (2.5; 91d23d8e-16bf-4726-9df2-d2f367db8a14)<br />87473 (9.0; e1cd695b-db43-4fc9-b390-918e31a1ec08)<br />86531 (6.9; 6951f729-d9fa-4e4f-940b-c8a9f67d6867)
+SampleB	83613 (6.7; ea97e918-2252-4f6c-8e61-b726d2694f0f)<br />81463 (7.4; ddcb289f-afa4-4b8f-bd11-1429291573af)<br />66369 (7.9; 86c6dda0-51fb-4cb4-93e7-0fcb883a91c3)<br />66000 (6.6; 2e537612-a7a3-492c-9528-cb66971840b6)<br />65345 (5.5; a2650e9e-1c18-4bea-b2d8-66874b0ba6e3)

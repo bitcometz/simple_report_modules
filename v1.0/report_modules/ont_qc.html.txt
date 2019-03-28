@@ -1,0 +1,78 @@
+[pros]
+Project_ID=Test20190215
+Project_Name=ONT两个样品的质控报告
+Report_Date=2019-03-13
+Report_ID=OONT两个样品的质控报告-2019-03-13
+Title_Name=诺禾致源ONT质控报告
+
+[bars]
+# 主要设置左侧的栏目，栏目名字=栏目图片相对路径,子栏目1名字,子栏目2名字(没有子栏目则为标记为"None"). 注意逗号是用英文输入的逗号
+项目背景="static/image/sidebar_icon_active_1.png","Nanopore测序平台","Nanopore测序原理","Nanopore测序优势"
+建库测序流程="static/image/sidebar_icon_active_2.png","DNA样品检测","文库构建","上机测序"
+结果展示及说明="static/image/sidebar_icon_active_3.png","原始数据处理","Nanopore数据统计"
+
+Note="static/image/sidebar_icon_active_8.png","None"
+References="static/image/sidebar_icon_active_9.png","None"
+
+[paras]
+# 主要设置每个栏目或者子栏目对应的内容部分。按顺序给出
+# 通过最前面的标记不同的元素: T0:代表栏目的开始，一段文字(P0:)，一个图片(F0)，图片图注(F1)，表格(S0)，表格说明(S1)
+# 多个图片(MF0:"图片名字","图片1路径":"图片1样品名字","图片2路径":"图片2样品名字"...)
+# 一行代表一段文字
+
+T0:"项目背景"
+P0:"近年来，随着高通量测序技术的发展，三代测序逐渐成为基因组研究的新兴手段。Pacbio、Nanopore等第三代测序技术有效的解决了二代测序读长短，无法跨过基因组高重复区域的问题。当下，Nanopore测序技术作为三代测序的后起之秀，因其读长长、产出高、价格低的优势开始被广泛应用于测序界。该平台利用纳米孔进行实时测序，没有读长限制，可以直接读取超长片段的序列信息，得到超长的reads。"
+
+T0:"Nanopore测序平台"
+P0:"诺禾致源引入的基于Nanopore测序原理的PromethION平台是继便携式MinION和台式设备GridION之后Oxford Nanopore Technologies（简称ONT）推出的最新超高通量测序仪。PromethION具有48个独立测序芯片，可以单独或同时运行，每张测序芯片包含多达3000个有效通道，一次总共可有多达144000个有效通道进行测序。该平台具有测序通量高、测序成本低、测序周期短等特点。"
+
+T0:"Nanopore测序原理"
+P0:"Nanopore测序即纳米孔测序，其原理是：纳米孔蛋白作为生物传感器，插入由合成聚合物形成的膜中。此外，核酸分子会与马达蛋白（Motor Protein）连接，该马达蛋白一方面对双链进行解链，使核酸单链在电泳的作用下通过特定的纳米孔蛋白，另一方面可控制DNA/RNA分子的移动速度，保证碱基逐一地穿过纳米孔，产生稳定可靠的电信号。由于不同碱基的带电性质不同，通过检测电信号的差异就能检测出通过纳米孔的碱基类别，实现测序。"
+F0:"static/image/sequencing_theory_ont.png","Figure. 1 Nanopore测序原理"
+
+T0:"Nanopore测序优势"
+P0:"1. 超长的测序读长，平均读长大于15Kb，最长读长能达到2M，可以跨域大范围的基因组重复区域进行测序，减少组装错误;"
+P0:"2. 更高的测序通量，PromethION平台的测序芯片包含多达3000个有效通道，一次总共可有多达144000(3000 * 48)个有效通道进行测序，平均单个cell产出在40-60Gb;"
+P0:"3. 无PCR扩增偏向性，建库过程中不需要进行DNA的PCR扩增，避免了覆盖度不均一及PCR冗余."
+
+T0:"建库测序流程"
+P0:"从DNA样品到最终数据获得，样品检测、建库、测序每一个环节都会对数据质量和数量产生影响，而数据质量又会直接影响后续信息分析的结果。为了从源头上保证测序数据的准确性、可靠性，诺禾致源对样品检测、建库、测序每一个生产步骤都严格把控，从根本上确保了高质量数据的产出。"
+
+
+T0:"DNA样品检测"
+P0:"诺禾致源对DNA样品的检测主要包括2种方法："
+P0:"&nbsp;&nbsp;(a)脉冲场电泳分析DNA降解程度以及是否有污染;"
+P0:"&nbsp;&nbsp; (b)Qubit对DNA浓度进行精确定量。"
+P0:"样品质量标准如下："
+F0:"static/image/sample_DNA_QC_ONT.png","图2 样品质量标准"
+
+T0:"文库构建"
+P0:"基因组DNA可以选择是否通过Covaris g-TUBE来打断和片段筛选。经损伤修复和加A尾后，再在片段两端分别连接测序接头，制备DNA文库，如图所示："
+F0:"static/image/library_construction_ONT.png","图3 ONT建库过程"
+
+T0:"上机测序"
+P0:"库检合格，根据文库的有效浓度及数据产出需求使用PromethION平台进行测序。"
+
+
+T0:"原始数据处理"
+P0:"PromethION测序平台是基于纳米孔的单分子实时测序技术，原始测序数据为Fast5格式文件，其中包括了测序时的电信号值等数据，我们采用Guppy软件对该文件进行basecalling得到碱基信息，储存为Fastq文件，并进行后续的分析。"
+
+T0:"Nanopore数据统计"
+P0:"对basecalling得到的数据采用软件NanoPlot进行质控及数据过滤，我们对下机得到的reads统计结果见表2、3及图3、4："
+
+S0:"data/Table1.xls","Table 1. Raw Data Summary"
+S0:"data/Table2.xls","Table 2. Top 5 longest reads"
+MF0:"图4 读长分布直方图","data/SampleA/SampleALogTransformed_HistogramReadlength.png":"SampleA","data/SampleB/SampleBLogTransformed_HistogramReadlength.png":"SampleB"
+MF0:"图5 读长及平均质量值分布图","data/SampleA/SampleALengthvsQualityScatterPlot_kde.png":"SampleA","data/SampleB/SampleBLengthvsQualityScatterPlot_kde.png":"SampleB"
+
+
+
+T0:"Note"
+P0:"1. Open the result file with a professional text editor, such as Excel or EditPlus."
+P0:"2. The Chrome web browser is recommended to open the HTML-based report."
+P0:"3. Click the Novogene icon or the lower right button to return to the front page."
+
+T0:"References"
+P0:"[1] Van Broeckhoven C, Cruts M, De Coster W, et al. NanoPack: visualizing and processing long-read sequencing data[J]. Bioinformatics, 2018, 34(15): 2666-2669."
+P0:"[2] Leggett R M, Clark M D. A world of opportunities with nanopore sequencing[J]. Journal of experimental botany, 2017, 68(20): 5419-5429."
+P0:"[3] Van Dijk E L, Jaszczyszyn Y, Naquin D, et al. The Third Revolution in Sequencing Technology[J]. Trends in Genetics, 2018."

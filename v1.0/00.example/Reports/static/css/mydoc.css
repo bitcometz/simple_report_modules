@@ -1,0 +1,195 @@
+body {
+    font-family: "Microsoft YaHei","font-awesome"  !important;
+    
+}
+.container {
+    width: 100%;
+    background-color: #f8f8f8;
+    min-width: 972px;
+}
+#main {
+    background-color: white;
+    border-left:1px dashed #666; 
+}
+#left{
+}
+#content {
+    padding: 40px;
+}
+#main #content p {
+    line-height: 2;
+    font-size: 14px;
+    text-indent:2em;
+}
+#content ul>li{
+    line-height: 2;
+    font-size: 14px;
+}
+#content h3 {
+    color: #00035b;
+    text-align: center;
+    margin: 50px 0px;
+    font-size: 22px;
+    border-bottom: 0px;
+    border-top: 1px dashed black;
+    padding-top: 50px;
+}
+#content h4 {
+    margin: 20px 0px;
+}
+    font-size: 18px;
+#content h5 {
+    font-weight: bold;
+    font-size: 14px;
+}
+#content h6 {
+    /*font-weight: bold;*/
+    text-align: center;
+}
+
+.bs-docs-sidebar {
+    height: 100%;
+}
+/*侧边宽度设置为23%,适应不同分辨率，3/12为25%，留2%空隙*/
+.bs-docs-sidebar.affix-top, .bs-docs-sidebar.affix, .bs-docs-sidebar.affix-bottom {
+    position: fixed;
+    top: 20px;
+    width: 23%;  
+}
+.bs-docs-sidebar.affix-bottom .bs-docs-sidenav, .bs-docs-sidebar.affix .bs-docs-sidenav {
+    margin-top: 20 px;
+    margin-bottom: 20px;
+}
+
+/*字体图片*/
+.bs-docs-sidebar > .bs-docs-sidenav >li>a {
+  font-size: 16px;
+}
+.bs-docs-sidebar > .bs-docs-sidenav >li>.nav>li>a {
+  font-size: 14px;
+}
+.bs-docs-sidebar > .bs-docs-sidenav >li>a>img {
+  width: 40px;
+}
+/*激活状态靠左*/
+.bs-docs-sidebar>.nav>.active, .bs-docs-sidebar>.nav>.active:hover, .bs-docs-sidebar>.nav>.active:focus,.bs-docs-sidebar>.nav > li:hover {
+    text-align: left;
+}
+/*侧边栏显示*/
+.bs-docs-sidebar .nav>.active>a[role=active], .bs-docs-sidebar .nav>.active:hover>a[role=active], .bs-docs-sidebar .nav>.active:focus>a[role=active] {
+    display: inline;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav>.active>a[role=hide], .bs-docs-sidebar .nav>.active:hover>a[role=hide], .bs-docs-sidebar .nav>.active:focus>a[role=hide] {
+    display: none;
+}
+.bs-docs-sidebar .nav > li >a[role=active] {
+}
+.bs-docs-sidebar .nav > li >a[role=hide] {
+    display: none;
+}
+.bs-docs-sidebar .nav > li:hover >a[role=active] {
+    /*font-weight: normal;*/
+}
+.bs-docs-sidebar .nav > li:hover >a[role=hide] {
+    display: none;
+}
+/*菜单*/
+.bs-docs-sidebar .nav>.active>a, .bs-docs-sidebar .nav>.active:hover>a, .bs-docs-sidebar .nav>.active:focus>a {
+    /*font-weight: bold;*/
+    color: black;
+    background-color: transparent;
+    border-left: 0;
+}
+.bs-docs-sidebar>.nav>li>.nav{
+}
+/**/
+.bs-docs-sidebar .nav .nav>.active>a, .bs-docs-sidebar .nav .nav>.active:hover>a, .bs-docs-sidebar .nav .nav>.active:focus>a{font-weight: bold}
+.bs-docs-sidebar .nav .nav li>a { color: black;}
+.bs-docs-sidebar .nav>li:hover>a, .bs-docs-sidebar .nav>li:focus>a {
+    /*font-weight:bold;*/
+}
+.bs-docs-sidebar>.nav>li {
+    /*margin-bottom: 15px;*/
+}
+/*去掉doc.min.css中对应的二级菜单间距*/
+.bs-docs-sidebar .nav .nav{
+    padding-bottom: 0px;
+}
+/*正文图片*/
+.content_img {
+    width: 100%;
+    text-align: center;
+}
+.content_img img{
+    max-width: 100%;
+}
+.content_table {
+    overflow: auto;
+    width: 100%;
+}
+/*方形列表*/
+#content ul.square>li{
+    list-style-type: square;
+    margin: 10px;
+}
+/*圆形列表*/
+#content ul.circle>li{
+    list-style-type: circle;
+    margin: 10px;
+}
+/*数字列表*/
+#content ul.decimal>li{
+    list-style-type: decimal;
+    margin: 10px;
+}
+/*0开头数字列表*/
+#content ul.decimal-leading-zero>li{
+    list-style-type: decimal-leading-zero;
+    margin: 10px;
+}
+
+/*表格*/
+
+.content_table table thead {
+    background-color: #a2cffe;
+    text-align: center;
+
+}
+.content_table table tbody {
+    font-size: 12px;
+}
+/*带导航的图片 打印展示*/
+.ad-my{
+    text-align: center;
+    max-width: 100%;
+}
+.ad-my img{
+    text-align: center;
+    max-width: 100%;
+    margin: 10px;
+}
+
+.bs-docs-sidebar ul{
+	text-align: left;
+}
+
+
+.bs-docs-sidebar{
+	padding-left: 0px;
+}
+
+.bs-docs-sidebar li.active ul{
+	padding-left: 35px;
+}
+
+.logo{
+	position:absolute;
+	margin:50% 25% 25% 85%;
+	padding-right: 20px;
+	max-width: 250px;
+}
+
+
+
+

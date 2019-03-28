@@ -1,0 +1,555 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="author" content="徐彪 &lt;xubiaosunny@163.com&gt;">
+
+<title>诺禾致源ONT质控报告</title>
+<!-- Bootstrap core CSS -->
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<!--<link rel="stylesheet" href="static/css/bootstrap-theme.min.css">-->
+<!-- Optional Bootstrap Theme -->
+<!--<link href="data:text/css;charset=utf-8," data-href="static/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">-->
+<!-- Documentation extras -->
+<link href="./static/css/docs.min.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link href="https://cdn.bootcss.com/docsearch.js/2.2.0/docsearch.css" rel="stylesheet">
+<link href="./static/css/mydoc.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="static/css/jquery.ad-gallery.css">
+<link rel="stylesheet" type="text/css" href="static/css/font-awesome/css/font-awesome.min.css">
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="">
+<link rel="icon" href="">
+
+<style type="text/css">
+
+</style>
+
+</head>
+
+
+    <body>
+
+        <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+            <!-- Docs page layout -->
+        <div class="container bs-docs-container">
+            <div class="row">
+                <div class="col-md-3" id="left">
+                    <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary">
+
+                        <ul class="nav bs-docs-sidenav text-right">
+
+                        <li>
+                            <a href="#a" role="active">
+                                <img src="static/image/sidebar_icon_active_1.png">
+                                1 项目背景
+                            </a>
+
+						    <ul class="nav">
+
+                                <li><a href="#a_1">1.1 Nanopore测序平台</a></li>
+
+                                <li><a href="#a_2">1.2 Nanopore测序原理</a></li>
+
+                                <li><a href="#a_3">1.3 Nanopore测序优势</a></li>
+
+        					</ul>
+
+					    </li>
+
+                        <li>
+                            <a href="#b" role="active">
+                                <img src="static/image/sidebar_icon_active_2.png">
+                                2 建库测序流程
+                            </a>
+
+						    <ul class="nav">
+
+                                <li><a href="#b_1">2.1 DNA样品检测</a></li>
+
+                                <li><a href="#b_2">2.2 文库构建</a></li>
+
+                                <li><a href="#b_3">2.3 上机测序</a></li>
+
+        					</ul>
+
+					    </li>
+
+                        <li>
+                            <a href="#c" role="active">
+                                <img src="static/image/sidebar_icon_active_3.png">
+                                3 结果展示及说明
+                            </a>
+
+						    <ul class="nav">
+
+                                <li><a href="#c_1">3.1 原始数据处理</a></li>
+
+                                <li><a href="#c_2">3.2 Nanopore数据统计</a></li>
+
+        					</ul>
+
+					    </li>
+
+                        <li>
+                            <a href="#d" role="active">
+                                <img src="static/image/sidebar_icon_active_8.png">
+                                4 Note
+                            </a>
+
+					    </li>
+
+                        <li>
+                            <a href="#e" role="active">
+                                <img src="static/image/sidebar_icon_active_9.png">
+                                5 References
+                            </a>
+
+					    </li>
+
+                        <div  style="position:relative;left:10%;bottom:-30px;padding-right: 20px;max-width: 230px;">
+                            <a href="http://www.novogene.com/"><img src="static/image/novogene_logo.png" width="80%" style="margin-bottom: 20px"></a>
+                            <p class="text-left" style="font-size: 12px"><i class="fa fa-phone-square fa-1x" aria-hidden="true"></i>&nbsp;&nbsp;TEL：400-658-1585</p>
+                            <p class="text-left" style="font-size: 12px"><i class="fa fa-envelope-open fa-1x" aria-hidden="true"></i>&nbsp;&nbsp;E-mail：<a href="mailto:邮件地址">service@novogene.com</a></p>
+                        </div>
+
+				        </ul>
+
+			        </div>
+		        </div>
+
+		<!--内容部分-->
+		<div class="col-md-9" role="main" id="main">
+			<!--封面-->
+
+			<p style ="text-align:left;padding-top:2%;padding-left:3%;font-size:15px">Project ID：Test20190215
+			<br/>
+			Report ID：OONT两个样品的质控报告-2019-03-13
+			<br/>
+			</p>
+
+			<div class="text-center" data-section-name="home" id="cover" >
+				<h2 style="padding-top: 12%">Project Name：ONT两个样品的质控报告</h2>
+
+				<br>
+				<br>
+				<br>
+
+
+                <!--<h4 style="padding-top: 10%">合同编号：XXXX<h4/>-->
+                <!--padding-top控制中间留白的大小，越大空白越大-->
+
+				<p style ="text-align:center;padding-top:16%;font-size:15px">
+				<h4 >Report Date：2019-03-13</h4>
+				<h4>项目负责：北京诺禾致源科技股份有限公司Denovo业务线</h4>
+				<!--<hr style="margin-top: 22%; height:1px;border:none;border-top:1px dashed">-->
+				</p>
+			</div>
+
+
+        			<div class="bs-docs-section" id="content">
+
+                    <h3 id="a" class="page-header">1 项目背景</h3>
+
+    <p class="paragraph">近年来，随着高通量测序技术的发展，三代测序逐渐成为基因组研究的新兴手段。Pacbio、Nanopore等第三代测序技术有效的解决了二代测序读长短，无法跨过基因组高重复区域的问题。当下，Nanopore测序技术作为三代测序的后起之秀，因其读长长、产出高、价格低的优势开始被广泛应用于测序界。该平台利用纳米孔进行实时测序，没有读长限制，可以直接读取超长片段的序列信息，得到超长的reads。</p>
+
+        <br />
+
+        <br />
+
+        <br />
+
+                    <h4 id="a_1">1.1 Nanopore测序平台</h4>
+
+    <p class="paragraph">诺禾致源引入的基于Nanopore测序原理的PromethION平台是继便携式MinION和台式设备GridION之后Oxford Nanopore Technologies（简称ONT）推出的最新超高通量测序仪。PromethION具有48个独立测序芯片，可以单独或同时运行，每张测序芯片包含多达3000个有效通道，一次总共可有多达144000个有效通道进行测序。该平台具有测序通量高、测序成本低、测序周期短等特点。</p>
+
+        <br />
+
+        <br />
+
+        <br />
+
+                    <h4 id="a_2">1.2 Nanopore测序原理</h4>
+
+    <p class="paragraph">Nanopore测序即纳米孔测序，其原理是：纳米孔蛋白作为生物传感器，插入由合成聚合物形成的膜中。此外，核酸分子会与马达蛋白（Motor Protein）连接，该马达蛋白一方面对双链进行解链，使核酸单链在电泳的作用下通过特定的纳米孔蛋白，另一方面可控制DNA/RNA分子的移动速度，保证碱基逐一地穿过纳米孔，产生稳定可靠的电信号。由于不同碱基的带电性质不同，通过检测电信号的差异就能检测出通过纳米孔的碱基类别，实现测序。</p>
+
+        <br />
+
+        <br />
+
+		<div class="content_img"><img src="static/image/sequencing_theory_ont.png" width="450"></div>
+		<h6>Figure. 1 Nanopore测序原理</h6>
+
+
+        <br />
+
+        <br />
+
+        <br />
+
+                    <h4 id="a_3">1.3 Nanopore测序优势</h4>
+
+    <p class="paragraph">1. 超长的测序读长，平均读长大于15Kb，最长读长能达到2M，可以跨域大范围的基因组重复区域进行测序，减少组装错误;</p>
+
+        <br />
+
+        <br />
+
+    <p class="paragraph">2. 更高的测序通量，PromethION平台的测序芯片包含多达3000个有效通道，一次总共可有多达144000(3000 * 48)个有效通道进行测序，平均单个cell产出在40-60Gb;</p>
+
+        <br />
+
+        <br />
+
+    <p class="paragraph">3. 无PCR扩增偏向性，建库过程中不需要进行DNA的PCR扩增，避免了覆盖度不均一及PCR冗余.</p>
+
+        <br />
+
+        <br />
+
+        <br />
+
+                    <h3 id="b" class="page-header">2 建库测序流程</h3>
+
+    <p class="paragraph">从DNA样品到最终数据获得，样品检测、建库、测序每一个环节都会对数据质量和数量产生影响，而数据质量又会直接影响后续信息分析的结果。为了从源头上保证测序数据的准确性、可靠性，诺禾致源对样品检测、建库、测序每一个生产步骤都严格把控，从根本上确保了高质量数据的产出。</p>
+
+        <br />
+
+        <br />
+
+        <br />
+
+                    <h4 id="b_1">2.1 DNA样品检测</h4>
+
+    <p class="paragraph">诺禾致源对DNA样品的检测主要包括2种方法：</p>
+
+        <br />
+
+        <br />
+
+    <p class="paragraph">&nbsp;&nbsp;(a)脉冲场电泳分析DNA降解程度以及是否有污染;</p>
+
+        <br />
+
+        <br />
+
+    <p class="paragraph">&nbsp;&nbsp; (b)Qubit对DNA浓度进行精确定量。</p>
+
+        <br />
+
+        <br />
+
+    <p class="paragraph">样品质量标准如下：</p>
+
+        <br />
+
+        <br />
+
+		<div class="content_img"><img src="static/image/sample_DNA_QC_ONT.png" width="450"></div>
+		<h6>图2 样品质量标准</h6>
+
+
+        <br />
+
+        <br />
+
+        <br />
+
+                    <h4 id="b_2">2.2 文库构建</h4>
+
+    <p class="paragraph">基因组DNA可以选择是否通过Covaris g-TUBE来打断和片段筛选。经损伤修复和加A尾后，再在片段两端分别连接测序接头，制备DNA文库，如图所示：</p>
+
+        <br />
+
+        <br />
+
+		<div class="content_img"><img src="static/image/library_construction_ONT.png" width="450"></div>
+		<h6>图3 ONT建库过程</h6>
+
+
+        <br />
+
+        <br />
+
+        <br />
+
+                    <h4 id="b_3">2.3 上机测序</h4>
+
+    <p class="paragraph">库检合格，根据文库的有效浓度及数据产出需求使用PromethION平台进行测序。</p>
+
+        <br />
+
+        <br />
+
+        <br />
+
+                    <h3 id="c" class="page-header">3 结果展示及说明</h3>
+
+        <br />
+
+                    <h4 id="c_1">3.1 原始数据处理</h4>
+
+    <p class="paragraph">PromethION测序平台是基于纳米孔的单分子实时测序技术，原始测序数据为Fast5格式文件，其中包括了测序时的电信号值等数据，我们采用Guppy软件对该文件进行basecalling得到碱基信息，储存为Fastq文件，并进行后续的分析。</p>
+
+        <br />
+
+        <br />
+
+        <br />
+
+                    <h4 id="c_2">3.2 Nanopore数据统计</h4>
+
+    <p class="paragraph">对basecalling得到的数据采用软件NanoPlot进行质控及数据过滤，我们对下机得到的reads统计结果见表2、3及图3、4：</p>
+
+        <br />
+
+        <br />
+
+        <h6>Table 1. Raw Data Summary</h6>
+        <div class="content_table" >
+		<table class="table table-bordered table-striped table-hover" >
+        <thead><tr>
+<th style="text-align :center">Sample</th><th style="text-align :center">Total Bases</th><th style="text-align :center">Active channels</th><th style="text-align :center">Number of reads</th><th style="text-align :center">Median read length</th><th style="text-align :center">Read length N50</th><th style="text-align :center">Median read quality</th><th style="text-align :center">>Q7 number(%)
+</th></tr></thead>
+<tbody><tr>
+<td style="text-align :center">SampleA</td><td style="text-align :center">16,547,274,697.0</td><td style="text-align :center">2,626.0</td><td style="text-align :center">1,405,147.0</td><td style="text-align :center">11,270.0</td><td style="text-align :center">19,037.0</td><td style="text-align :center">6.9</td><td style="text-align :center">664469(47.3%)
+</td></tr></tbody>
+<tbody><tr>
+<td style="text-align :center">SampleB</td><td style="text-align :center">1,805,290,266.0</td><td style="text-align :center">2,276.0</td><td style="text-align :center">191,701.0</td><td style="text-align :center">7,235.0</td><td style="text-align :center">16,754.0</td><td style="text-align :center">5.2</td><td style="text-align :center">19702(10.3%)
+</td></tr></tbody>
+</table>
+</div>
+
+        <br />
+
+        <br />
+
+        <h6>Table 2. Top 5 longest reads</h6>
+        <div class="content_table" >
+		<table class="table table-bordered table-striped table-hover" >
+        <thead><tr>
+<th style="text-align :center">Sample</th><th style="text-align :center">Top 5 read_lengths (mean_basecall_quality; reads_id)
+</th></tr></thead>
+<tbody><tr>
+<td style="text-align :center">SampleA</td><td style="text-align :center">103499 (6.6; c4a40871-3586-4ae6-bb73-6b3ccc90d9f3)<br />101708 (6.8; e414fc51-f10e-4817-830e-712b86189d8c)<br />96305 (2.5; 91d23d8e-16bf-4726-9df2-d2f367db8a14)<br />87473 (9.0; e1cd695b-db43-4fc9-b390-918e31a1ec08)<br />86531 (6.9; 6951f729-d9fa-4e4f-940b-c8a9f67d6867)
+</td></tr></tbody>
+<tbody><tr>
+<td style="text-align :center">SampleB</td><td style="text-align :center">83613 (6.7; ea97e918-2252-4f6c-8e61-b726d2694f0f)<br />81463 (7.4; ddcb289f-afa4-4b8f-bd11-1429291573af)<br />66369 (7.9; 86c6dda0-51fb-4cb4-93e7-0fcb883a91c3)<br />66000 (6.6; 2e537612-a7a3-492c-9528-cb66971840b6)<br />65345 (5.5; a2650e9e-1c18-4bea-b2d8-66874b0ba6e3)
+</td></tr></tbody>
+</table>
+</div>
+
+        <br />
+
+        <br />
+
+    <div class="albumSlider">
+    <div class="fullview"> <img src="data/SampleA/SampleALogTransformed_HistogramReadlength.png" alt="CNTRL1.IS" title="SampleA" /></div>
+    <div class="slider">
+    <div class="button movebackward" title="Up roll"></div>
+    <div class="imglistwrap"><ul class="imglist">
+
+
+        <li><a id="example1" href="data/SampleA/SampleALogTransformed_HistogramReadlength.png" ><img src="data/SampleA/SampleALogTransformed_HistogramReadlength.png" alt="PNG1" title="SampleA" /></a></li>
+
+
+        <li><a id="example2" href="data/SampleB/SampleBLogTransformed_HistogramReadlength.png" ><img src="data/SampleB/SampleBLogTransformed_HistogramReadlength.png" alt="PNG2" title="SampleB" /></a></li>
+
+    </ul></div>
+    <div class="button moveforward" title="Down roll"></div>
+    </div>
+    </div>
+    </div>
+
+        <p class="name_fig" style="clear:both">"图4 读长分布直方图"</p>
+
+        <br />
+
+        <br />
+
+    <div class="albumSlider">
+    <div class="fullview"> <img src="data/SampleA/SampleALengthvsQualityScatterPlot_kde.png" alt="CNTRL1.IS" title="SampleA" /></div>
+    <div class="slider">
+    <div class="button movebackward" title="Up roll"></div>
+    <div class="imglistwrap"><ul class="imglist">
+
+
+        <li><a id="example1" href="data/SampleA/SampleALengthvsQualityScatterPlot_kde.png" ><img src="data/SampleA/SampleALengthvsQualityScatterPlot_kde.png" alt="PNG1" title="SampleA" /></a></li>
+
+
+        <li><a id="example2" href="data/SampleB/SampleBLengthvsQualityScatterPlot_kde.png" ><img src="data/SampleB/SampleBLengthvsQualityScatterPlot_kde.png" alt="PNG2" title="SampleB" /></a></li>
+
+    </ul></div>
+    <div class="button moveforward" title="Down roll"></div>
+    </div>
+    </div>
+    </div>
+
+        <p class="name_fig" style="clear:both">"图5 读长及平均质量值分布图"</p>
+
+        <br />
+
+        <br />
+
+        <br />
+
+                    <h3 id="d" class="page-header">4 Note</h3>
+
+    <p class="paragraph">1. Open the result file with a professional text editor, such as Excel or EditPlus.</p>
+
+        <br />
+
+        <br />
+
+    <p class="paragraph">2. The Chrome web browser is recommended to open the HTML-based report.</p>
+
+        <br />
+
+        <br />
+
+    <p class="paragraph">3. Click the Novogene icon or the lower right button to return to the front page.</p>
+
+        <br />
+
+        <br />
+
+        <br />
+
+                    <h3 id="e" class="page-header">5 References</h3>
+
+    <p class="paragraph">[1] Van Broeckhoven C, Cruts M, De Coster W, et al. NanoPack: visualizing and processing long-read sequencing data[J]. Bioinformatics, 2018, 34(15): 2666-2669.</p>
+
+        <br />
+
+        <br />
+
+    <p class="paragraph">[2] Leggett R M, Clark M D. A world of opportunities with nanopore sequencing[J]. Journal of experimental botany, 2017, 68(20): 5419-5429.</p>
+
+        <br />
+
+        <br />
+
+    <p class="paragraph">[3] Van Dijk E L, Jaszczyszyn Y, Naquin D, et al. The Third Revolution in Sequencing Technology[J]. Trends in Genetics, 2018.</p>
+
+        <br />
+
+        <br />
+
+        <br />
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="static/js/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="static/js/bootstrap.min.js"></script>
+
+<script src="./static/js/docs.min.js"></script>
+<!-- Analytics
+================================================== -->
+<!--<script src="./static/js/jquery.easing.1.3.js"></script>
+<script src="./static/js/scrollify.min.js"></script>
+<script src="./static/js/main.js"></script>-->
+<!--调至首top-->
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.ad-gallery.js"></script>
+<script type="text/javascript" src="static/js/zzsc.js"></script>
+
+		<div class="col-md-2 hidden-print" title="TOP">
+		<p><a href="report.html" target="_top">
+			<button   type="button" class="btn" style="position: fixed;top: 55px;right: 0.5%" href="report.html" target="_top"><i class="fa fa-arrow-up fa-1x" aria-hidden="true"></i></button>
+		</a></p>
+		</div>
+
+<!--<script type="text/javascript" src="static/js/html2canvas.js"></script>
+<script type="text/javascript" src="static/js/jspdf.debug.js"></script>-->
+<script>
+
+$(document).ready(function(){
+	$("#cover").css("height",$(window).height());//封面高度为屏幕高度
+	// $("img").attr("crossorigin","*");
+});
+/*在ad-gallery插件的基础上添加了图片搜索的功能
+ *实现：匹配图片文件名的开头，匹配到的图片显示，未匹配的不显示，为空则全部显示
+*/
+
+function genescarh(t){
+	// var img_list_e = t.parent().nextAll(".ad-nav").find(".ad-thumb-list");
+	var img_list_e = t.parent().nextAll(".ad-nav").find(".ad-thumb-list").find("img");
+	// console.log(t.val())
+	var reg=new RegExp("^"+t.val());
+	$(".ad-thumbs").animate({scrollLeft: '0px'}); //每次搜索将预览图置左
+	for(var i=0;i<img_list_e.length;i++){
+		var img_name = img_list_e[i].getAttribute("src").split("/").pop();
+		if(reg.test(img_name)){
+			// console.log(img_list_e[i]);
+			img_list_e[i].style.display="inline";
+		}else{
+			// console.log(img_list_e[i]);
+			img_list_e[i].style.display="none";
+		}
+	}
+}
+
+function download_pdf(){
+	// var pdf = new jsPDF('p','pt','a4');
+	// pdf.internal.scaleFactor = 1;
+	// var options = {
+	// 		pagesplit: true
+	// };
+
+	// //$('.pdf-wrapper')
+	// pdf.addHTML($("#main"),options,function() {
+	// 	pdf.save('web1111.pdf');
+	// });
+}
+/*@打印pdf函数，使用浏览器打印功能
+ *将显示不全的表格和导航图片都显示出来
+*/
+
+function myprint(){
+	// console.log($("table.table"));
+	//
+	for(var i=0;i<$("table.table").length;i++){
+		$('table.table')[i].setAttribute('style','TABLE-LAYOUT:fixed;WORD-BREAK:break-all');
+	}
+	$(".ad-gallery").each(function(){
+		$(this).addClass("hidden-print");
+		if (!$(this).find('.ad-my').length){
+			// console.log($(this));
+			$(this).after('<div class="ad-my"></div>');
+			$(this).children(".ad-nav").find('img').each(function(){
+				$(".ad-my").append('<img src=' + this.src + '>');
+			})
+		}
+
+	});
+	window.print();
+	$("table.table").each(function(){
+		$(this).removeAttr('style');
+	});
+	$(".ad-my").remove();
+}
+
+</script>
+
+</body>
+
+</html>
