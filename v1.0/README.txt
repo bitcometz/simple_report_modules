@@ -26,3 +26,5 @@ S1:"(1)Species：XX 物种；","(2)D：Complete Duplicated BUSCOs; F：Fragmente
 
 NOTE
 相关的表动的图片和表格放在输出目录的data上，因为报告生成的时候需要载入这些图片表格
+
+在00.examples有一个ONT的QC报告例子
