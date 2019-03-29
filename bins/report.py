@@ -1,1 +1,0 @@
-/HWNAS12/RAD/zhangjinbo/01.release/00.asms/V1.6/auto_wtdbg/report.py
