@@ -1,5 +1,7 @@
 # -*- coding: UTF-8 -*-
 import os
+import base64
+
 
 def set4head(title_name):
 
@@ -16,6 +18,18 @@ def set4head(title_name):
 <meta name="author" content="徐彪 &lt;xubiaosunny@163.com&gt;">
 
 <title>{title_name}</title>
+
+<!-- For Slide effect -->
+<link rel="stylesheet" href="static/css/base.css">
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/blueimp-gallery.min.css">
+<link rel="stylesheet" href="static/css/bootstrap-image-gallery.min.css">
+<script type="application/javascript" src="static/js/jquery.js"></script>
+<script type="application/javascript" src="static/js/jquery.albumSlider.min.js"></script>
+<script type="application/javascript" src="static/js/jquery.blueimp-gallery.min.js"></script>
+<script type="application/javascript" src="static/js/bootstrap.min.js"></script>
+<script type="application/javascript" src="static/js/bootstrap-image-gallery.min.js"></script>
+
 <!-- Bootstrap core CSS -->
 <!-- 新 Bootstrap 核心 CSS 文件 -->
 <link rel="stylesheet" href="static/css/bootstrap.min.css">
@@ -36,32 +50,14 @@ def set4head(title_name):
 <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 
-
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="">
 <link rel="icon" href="">
 <style type="text/css"></style>
 
-<!-- For Slide effect -->
-<link rel="stylesheet" href="static/css/base.css">
-<link rel="stylesheet" href="static/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="static/css/blueimp-gallery.min.css">
-<link rel="stylesheet" href="static/css/bootstrap-image-gallery.min.css">
-
-<script type="application/javascript" src="static/js/jquery.js"></script>
-<script type="application/javascript" src="static/js/jquery.albumSlider.min.js"></script>
-<script type="application/javascript" src="static/js/jquery.blueimp-gallery.min.js"></script>
-<script type="application/javascript" src="static/js/bootstrap.min.js"></script>
-<script type="application/javascript" src="static/js/bootstrap-image-gallery.min.js"></script>
-
-
-
-
-
     '''.format(title_name=title_name)
 
-    txt +='''
+    txt += '''
 
     <script>
         function displaySubMenu(li) {
@@ -103,6 +99,7 @@ def set4head(title_name):
 
     return txt
 
+
 def add_title(name, title, numS):
     # <a name="Nanopore Sequencing Mechanism"></a>
     # <h3>Nanopore测序原理</h3>
@@ -112,6 +109,7 @@ def add_title(name, title, numS):
 '''.format(name=name, title=title, numS=numS)
     return txt
 
+
 def add_paragraph(paragraph):
     # <p class="paragraph">诺禾致源引入的基于Nangies测序成本低、测序周期短等特点。</p>
     txt = '''
@@ -119,11 +117,13 @@ def add_paragraph(paragraph):
 '''.format(paragraph=paragraph)
     return txt
 
+
 def add_paragraphs(paragraphs):
     txt = ''
     for i in paragraphs:
         txt += add_paragraph(i) + '\n'
     return txt
+
 
 def add_figure(path, name):
     txt = '''
@@ -140,11 +140,11 @@ def add_figures(name, lists):
     arr = lists[0].split(":")
     txt += '''
     <div class="albumSlider">
-    <div class="fullview"> <img src="{default_figure}" alt="CNTRL1.IS" title="{sample}" /></div>
+    <div class="fullview"> <img src="data:image/png;base64,{default_figure_base64}" alt="CNTRL1.IS" title="{sample}" /></div>
     <div class="slider">
     <div class="button movebackward" title="Up roll"></div>
     <div class="imglistwrap"><ul class="imglist">
-'''.format(default_figure=arr[0].strip('\"'), sample=arr[1].strip('\"'))
+'''.format(default_figure_base64=base64.b64encode(open(arr[0].strip('\"'), "rb").read()).decode("utf-8"), sample=arr[1].strip('\"'))
 
     index = 0
     for i in lists:
@@ -152,9 +152,9 @@ def add_figures(name, lists):
         arr = i.split(":")
         txt += '''
         
-        <li><a id="{href}" href='{href}' title="{sample}" data-gallery="#error"><img alt="{sample}" src="{file}" /></a></li>
+        <li><a id="{href}" href="data:image/png;base64,{href_base64}" title="{sample}" data-gallery="#error"><img alt="{sample}" src="data:image/png;base64,{file_base64}" /></a></li>
 
-'''.format(href=arr[0].strip('\"'), num=index, file=arr[0].strip('\"'), sample=arr[1].strip('\"'))
+'''.format(href=arr[0].strip('\"'), href_base64=base64.b64encode(open(arr[0].strip('\"'), "rb").read()).decode("utf-8"), num=index, file_base64=base64.b64encode(open(arr[0].strip('\"'), "rb").read()).decode("utf-8"), sample=arr[1].strip('\"'))
 
     txt += '''
     </ul>
@@ -178,7 +178,8 @@ def add_blockquote(quotes):
     txt += '</blockquote>'
     return txt
 
-def add_table(table): #table是一个元组：（名称，列表） 列表第一个元素为表头
+
+def add_table(table):  # table是一个元组：（名称，列表） 列表第一个元素为表头
     if table[1]:
         table_list = table[1]
         #out = 'Table&nbsp.&nbsp' + table[0] + '<br/>'
@@ -205,18 +206,18 @@ def add_table(table): #table是一个元组：（名称，列表） 列表第一
                 for item in table_list[i]:
                     out += '''<td style="text-align :center">{item}</td>'''.format(item=item)
                 out += '''</tr></tbody>\n'''
-                #for item in table_list[i]:
+                # for item in table_list[i]:
                 #    if isinstance(item,list):
                 #        out += '<td rowspan=' + str(item[1]) + '>' + item[0] + '</td>'
                 #    else:
                 #        out += '<td>'+ item + '</td>'
             #out += '</tr>'
 
-
         out += '</table>\n</div>\n'
     else:
         out = ""
     return out
+
 
 def readTable(file):
 
@@ -230,6 +231,7 @@ def readTable(file):
                 list1.append(listT)
     return list1
 
+
 def addNote(lists):
     txt = ''
     txt += '''
@@ -242,6 +244,7 @@ def addNote(lists):
     </p>
 '''
     return txt
+
 
 def add_table_note(line):
     txt = '''
@@ -258,6 +261,7 @@ def add_blank_line(num):
 '''
     return txt
 
+
 def page_start(note, logo):
     txt = ''
     txt += '''
@@ -268,8 +272,9 @@ def page_start(note, logo):
         <hr/>
         </p><br/>
 
-    '''.format(note=note,logo=logo)
+    '''.format(note=note, logo=logo)
     return txt
+
 
 def page_end():
     txt = ''
@@ -279,6 +284,7 @@ def page_end():
     </div>
 '''
     return txt
+
 
 def add_sections(name, herfs, sects, num):
 
@@ -296,7 +302,7 @@ def add_sections(name, herfs, sects, num):
 
     if name in sects:
         for ti in range(0, len(sects[name])):
-            arr = sects[name][ti].split(":",1)
+            arr = sects[name][ti].split(":", 1)
 
             if sects[name][ti].startswith("P0"):
                 arr[1] = arr[1].strip('\"')
@@ -328,7 +334,6 @@ def add_sections(name, herfs, sects, num):
                     tmp_list.append(arr3[i])
                 txt += add_figures(arr3[0], tmp_list)
                 txt += add_blank_line(1)
-
 
     txt += add_blank_line(2)
 
@@ -579,6 +584,7 @@ def end():
 </html>    
     '''
     return txt
+
 
 def make_dirs(d):
     if not os.path.isdir(d):
