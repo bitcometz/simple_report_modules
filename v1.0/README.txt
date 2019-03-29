@@ -26,6 +26,9 @@ P0:"BUSCO（Benchmarking Universal Single-Copy Orthologs：http://busco.ezlab.or
 S0:"data/busco.table1.xls","表4 BUSCO评估结果"
 S1:"(1)Species：XX 物种；","(2)D：Complete Duplicated BUSCOs; F：Fragmented BUSCOs; M：Missing BUSCOs; n：Total BUSCO groups searched.:"
 
+MF0:"图5 读长及平均质量值分布图","data/SampleA/SampleALengthvsQualityScatterPlot_kde.png":"SampleA","data/SampleB/SampleBLengthvsQualityScatterPlot_kde.png":"SampleB"
+
+
 NOTE
 相关的表动的图片和表格放在输出目录的data上，因为报告生成的时候需要载入这些图片表格
 
