@@ -19,46 +19,43 @@ def set4head(title_name):
 
 <title>{title_name}</title>
 
-<!-- For Slide effect -->
-<link rel="stylesheet" href="static/css/base.css">
-<link rel="stylesheet" href="static/css/bootstrap.min.css">
-<link rel="stylesheet" href="static/css/blueimp-gallery.min.css">
-<link rel="stylesheet" href="static/css/bootstrap-image-gallery.min.css">
-<script type="application/javascript" src="static/js/jquery.js"></script>
-<script type="application/javascript" src="static/js/jquery.albumSlider.min.js"></script>
-<script type="application/javascript" src="static/js/jquery.blueimp-gallery.min.js"></script>
-<script type="application/javascript" src="static/js/bootstrap.min.js"></script>
-<script type="application/javascript" src="static/js/bootstrap-image-gallery.min.js"></script>
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap-image-gallery.min.css">
+    <script type="application/javascript" src="static/js/jquery.js"></script>
+    <script type="application/javascript" src="static/js/jquery.albumSlider.min.js"></script>
+    <script type="application/javascript" src="static/js/jquery.blueimp-gallery.min.js"></script>
+    <script type="application/javascript" src="static/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="static/js/bootstrap-image-gallery.min.js"></script>
 
-<!-- Bootstrap core CSS -->
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<link rel="stylesheet" href="static/css/bootstrap.min.css">
-<!-- 可选的Bootstrap主题文件（一般不用引入） -->
-<!--<link rel="stylesheet" href="static/css/bootstrap-theme.min.css">-->
-<!-- Optional Bootstrap Theme -->
-<!--<link href="data:text/css;charset=utf-8," data-href="static/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">-->
-<!-- Documentation extras -->
-<link href="./static/css/docs.min.css" rel="stylesheet">
-<link href="https://cdn.bootcss.com/docsearch.js/2.2.0/docsearch.css" rel="stylesheet">
-<link href="./static/css/mydoc.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="static/css/jquery.ad-gallery.css">
-<link rel="stylesheet" type="text/css" href="static/css/font-awesome/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <!--<link rel="stylesheet" href="static/css/bootstrap-theme.min.css">-->
+    <!-- Optional Bootstrap Theme -->
+    <!--<link href="data:text/css;charset=utf-8," data-href="static/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">-->
+    <!-- Documentation extras -->
+    <link href="static/css/docs.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="static/js/html5shiv.js"></script>
+    <script src="static/js/respond.min.js"></script>
+    <![endif]-->
+    <link href="static/css/docsearch.css" rel="stylesheet">
+    <link href="static/css/mydoc.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="static/css/jquery.ad-gallery.css">
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome/css/font-awesome.min.css">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="">
+    <link rel="icon" href="">
 
-<!--For js>
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-
-<!-- Favicons -->
-<link rel="apple-touch-icon" href="">
-<link rel="icon" href="">
-<style type="text/css"></style>
+    <style type="text/css"></style>
 
     '''.format(title_name=title_name)
 
     txt += '''
-
     <script>
         function displaySubMenu(li) {
             var subMenu = li.getElementsByTagName("ul")[0];
@@ -80,19 +77,108 @@ def set4head(title_name):
         $(window).resize(function () {
             $.getScript("data/repeat.js");
         });
-        
-        $(document).ready(function(){
-	        $("#cover").css("height",$(window).height());//封面高度为屏幕高度
-	    // $("img").attr("crossorigin","*");
-    });
-        
     </script>
-
     <style media="print">
         .noprint {
             DISPLAY: none;
         }
     </style>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <!--<script src="static/js/jquery.min.js"></script>-->
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <script src="./static/js/docs.min.js"></script>
+    <!-- Analytics
+    ================================================== -->
+    <!--<script src="./static/js/jquery.easing.1.3.js"></script>
+    <script src="./static/js/scrollify.min.js"></script>
+    <script src="./static/js/main.js"></script>-->
+    <!--调至首top-->
+    <!--<script type="text/javascript" src="static/js/jquery.min.js"></script>-->
+    <script type="text/javascript" src="static/js/jquery.ad-gallery.js"></script>
+    <script type="text/javascript" src="static/js/zzsc.js"></script>
+
+
+    <!--<script type="text/javascript" src="static/js/html2canvas.js"></script>
+    <script type="text/javascript" src="static/js/jspdf.debug.js"></script>-->
+    <script>
+
+        $(document).ready(function () {
+            $("#cover").css("height", $(window).height());//封面高度为屏幕高度
+            // $("img").attr("crossorigin","*");
+        });
+
+        /*在ad-gallery插件的基础上添加了图片搜索的功能
+         *实现：匹配图片文件名的开头，匹配到的图片显示，未匹配的不显示，为空则全部显示
+        */
+        function genescarh(t) {
+            // var img_list_e = t.parent().nextAll(".ad-nav").find(".ad-thumb-list");
+            var img_list_e = t.parent().nextAll(".ad-nav").find(".ad-thumb-list").find("img");
+            // console.log(t.val())
+            var reg = new RegExp("^" + t.val());
+            $(".ad-thumbs").animate({scrollLeft: '0px'}); //每次搜索将预览图置左
+            for (var i = 0; i < img_list_e.length; i++) {
+                var img_name = img_list_e[i].getAttribute("src").split("/").pop();
+                if (reg.test(img_name)) {
+                    // console.log(img_list_e[i]);
+                    img_list_e[i].style.display = "inline";
+                } else {
+                    // console.log(img_list_e[i]);
+                    img_list_e[i].style.display = "none";
+                }
+            }
+        }
+
+        function download_pdf() {
+            // var pdf = new jsPDF('p','pt','a4');
+            // pdf.internal.scaleFactor = 1;
+            // var options = {
+            //      pagesplit: true
+            // };
+
+            // //$('.pdf-wrapper')
+            // pdf.addHTML($("#main"),options,function() {
+            //  pdf.save('web1111.pdf');
+            // });
+        }
+
+        /*@打印pdf函数，使用浏览器打印功能
+         *将显示不全的表格和导航图片都显示出来
+        */
+        function myprint() {
+            // console.log($("table.table"));
+            //
+            for (var i = 0; i < $("table.table").length; i++) {
+                $('table.table')[i].setAttribute('style', 'TABLE-LAYOUT:fixed;WORD-BREAK:break-all');
+            }
+            $(".ad-gallery").each(function () {
+                $(this).addClass("hidden-print");
+                if (!$(this).find('.ad-my').length) {
+                    // console.log($(this));
+                    $(this).after('<div class="ad-my"></div>');
+                    $(this).children(".ad-nav").find('img').each(function () {
+                        $(".ad-my").append('<img src=' + this.src + '>');
+                    })
+                }
+
+            });
+            window.print();
+            $("table.table").each(function () {
+                $(this).removeAttr('style');
+            });
+            $(".ad-my").remove();
+        }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="192x192" href="static/image/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="static/image/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/image/favicon-16x16.png">
 
 </head>
 '''
