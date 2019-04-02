@@ -1,0 +1,7 @@
+Base type	Number (bp)	% of genome
+A	100000	25
+T	100000	25
+C	100000	25
+G	100000	25
+N	0	0
+GC	200000	50

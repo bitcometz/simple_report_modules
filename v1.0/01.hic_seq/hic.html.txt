@@ -1,0 +1,121 @@
+[pros]
+Project_ID=Test20190402
+Project_Name=Hi-C DNA Library Preparation and Sequencing Quality Control
+Report_Date=2019-04-02
+Report_ID=HiC两个样品的质控报告-2019-04-02
+Title_Name=诺禾致源HiC质控报告
+Project_principals=Novogene Overseas Department
+
+[bars]
+# 主要设置左侧的栏目，栏目名字=栏目图片相对路径,子栏目1名字，子栏目2名字(没有子栏目则为标记为"None"). 注意逗号是用英文输入的逗号
+Background="static/image/sidebar_icon_active_1.png","None"
+Experimental Procedure="static/image/sidebar_icon_active_2.png","Library Preparation for Sequencing","Sequencing"
+Results="static/image/sidebar_icon_active_3.png","Distribution of Sequencing Quality","Distribution of Sequencing Error Rate","A/T/G/C Content Distribution","Sequencing Data Filtration","Summary of Sequencing Data Information"
+Appendix="static/image/sidebar_icon_active_4.png","Introduction of Sequencing Data Format","Explanation of Sequencing Data Related","References"
+
+
+[paras]
+# 主要设置每个栏目或者子栏目对应的内容部分。按顺序给出
+# 通过最前面的标记不同的元素: T0:代表栏目的开始，一段文字(P0:)，一个图片(F0)，图片图注(F1)，表格(S0)，表格说明(S1)
+# 多个图片(MF0:"图片名字","图片1路径":"图片1样品名字","图片2路径":"图片2样品名字"...)
+# 一行代表一段文字
+
+T0:"Background"
+P0:"Hi-C is short for High-throughput Chromosome Conformation Capture (Hi-C) technology. The study of the three-dimensional spatial structure and function of genomes is referred to as Three-Dimensional Genomics (3D Genomics). In 2003, Job Dekker and his collaborators proposed chromatin capture imaging (Chromatin Conformation Capture, 3C) to determine interchromosomal interactions between specific points. Hi-C was developed based on this in 2009. After the cross-linking of DNA fragments with a long linear distance and close spatial structure, the cross-linked DNA fragments was enriched, followed by high-throughput sequencing. The analysis of sequencing data can reveal the long-distance interaction of chromatin, thus deducing the three-dimensional structure of the genome. What’s more, after rapid development in recent years, it has been applied to the study of spatial regulation mechanisms of gene expression, construction of chromosome-level reference genomes and construction of haplotype maps."
+
+T0:"Experimental Procedure"
+P0:"Working Flow:"
+F0:"data/hic.figure1.flow.png","Figure 1 Schematic diagram of experimental flow"
+
+T0:"Library Preparation for Sequencing"
+P0:"1)	Nucleus DNA from tissue of the sample individual was cross-linked."
+P0:"2)	Then nucleus DNA was cutted with a restriction enzyme, leaving pairs of distally located but physically interacted DNA molecules attached to one another. "
+P0:"3)	The sticky ends of these digested fragments were biotinylated."
+P0:"4)	Then biotinylated DNA fragments was ligated to each other to form chimeric circles. "
+P0:"5)	The protein and DNA uncrosslinked after the protein at the junction point was digested. Genomic DNA were extracted and breaken to 350 bp fragments randomly by Covaris crusher."
+P0:"6)	Library construction: DNA fragments with biotin were captured using the avidin magnetic beads. The library was prepared by the steps of terminal repair, A tail addition, adaptor ligation, PCR amplification and purification. "
+F0:"data/hic.figure2.label.png","Figure 2.1 Hi-C Genomic DNA extraction and biotin labeling (Lieberman-Aiden E, et al., Science, 2009, 326(5950):289-93)"
+F0:"data/hic.figure3.lib.png","Figure 2.2 Library Construction Workflow"
+
+T0:"Sequencing"
+P0:"After deproteinization, removal of biotinylated free-ends, and DNA purification, Hi-C libraries were controlled for quality and sequenced on an Illumina sequencer (paired-end sequencing with 150 bp in read length)."
+
+
+T0:"Distribution of Sequencing Quality"
+P0:"The “e” represents the sequence error rate and Qphred represents the base quality value, Qphred=-10log10(e). The relationship between sequencing error rate (e) and sequencing base quality value (Qphred) is as below:"
+S0:"data/hic.table1.qvalue.txt","Table1 Sequencing quality value conversion"
+P0:"The distribution of quality score is shown in Fig.3.1:"
+MF0:"Figure 3.1 Sequencing error rate distribution","data/hic.figure4.qual_sample1.png":"Sample1","data/hic.figure4.qual_sample2.png":"Sample2"
+P0:"The base position is on the horizontal axis and the sequencing quality is on the vertical axis"
+P0:"The first half part of the distribution is for reads1 and the latter half part is for reads2."
+
+
+T0:"Distribution of Sequencing Error Rate"
+P0:"Sequencing error rate is related to the base quality of the obtained sequence. The sequencing platform, chemical reactants, and sample quality can all influence sequencing error rate and herein the base quality. For next-generation sequencing (NGS) with sequencing-by-synthesis strategy, sequencing error rate distribution shows two common features:"
+P0:"&nbsp;(1)	Error rate increases with extending of the sequencing reads due to the consumption of chemical reagents, damage of the DNA template by laser irradiation, and possible accumulation of errors during the sequencing cycles. All the Illumina high-throughput sequencing platforms have this feature (Erlich Y. et al. 2008; Jiang et al. 2011)."
+P0:"&nbsp;(2)	The sequencing error rate is higher for the first several bases than at other positions, which is likely the result of reading errors during the first few cycles after calibration of the optical instruments."
+P0:"Generally, single base error rate should be lower than 1%. The error rate of this project is shown in Fig.3.2:"
+MF0:"Figure 3.2 Sequencing error rate distribution","data/hic.figure5.err_sample1.png":"Sample1","data/hic.figure5.err_sample2.png":"Sample2"
+P0:"The base position is on the horizontal axis and the single base error rate is on the vertical axis"
+P0:"The first half part of the distribution is for reads1 and the latter half part is for reads2"
+
+
+T0:"A/T/G/C Content Distribution"
+P0:"GC content distribution is evaluated to detect potential AT/GC separation, which affects subsequent gene expression quantification. Theoretically, G should equal C, and A should equal T throughout the whole sequencing process for non-stranded libraries, whereas AT/GC separation is normally observed in stranded libraries. For DGE (Digital Gene Expression) libraries, a large variation of sequencing error in the first 6-7 bases is allowed due to the use of random primers in library construction."
+P0:"The distribution of GC content is shown in Fig.3:"
+MF0:"Figure 3.3 GC content distribution","data/hic.figure6.gc_sample1.png":"Sample1","data/hic.figure6.gc_sample2.png":"Sample2"
+P0:"The base position is on the horizontal axis and the single base percentage is on the vertical axis"
+P0:"The first half part of the distribution is for reads1 and the latter half part is for reads2."
+
+T0:"Sequencing Data Filtration"
+P0:"Raw sequencing data may contain adapter contaminated and low-quality reads. These sequence artifacts may increase the complexity of downstream analyses, which means that quality control is an essential step. All the downstream analyses will be based on clean reads that pass quality control."
+P0:"We performed quality control according to the following procedure:"
+P0:"&nbsp;(1) Discard a read pair if either one read contains adapter contamination;"
+P0:"&nbsp;(2) Discard a read pair if more than 10% of bases are uncertain in either one read;"
+P0:"&nbsp;(3) Discard a read pair if the proportion of bases of low quality is over 50% in either one read."
+P0:"Adapter sequences :"
+P0:"5' Adapter "
+P0:"5'-AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT-3'"
+P0:"3' Adapter(The underlined 6bp bases is Index)"
+P0:"5'-GATCGGAAGAGCACACGTCTGAACTCCAGTCACATCACGATCTCGTATGCCGTCTTCTGCTTG-3'"
+P0:"The Sequencing data filtration of this project can be seen in Fig.3.4:"
+MF0:"Figure 3.4 Composition of Raw Data","data/hic.figure7.com_sample1.png":"Sample1","data/hic.figure7.com_sample2.png":"Sample2"
+
+T0:"Summary of Sequencing Data Information"
+P0:"Consistent with the Illumina platform sequencing features, the data quality control summary is shown in Table 2."
+S0:"data/hic.table2.summary.txt","Table 2 Data Quality Summary"
+P0:"The details for the sequencing data statistics are as follows:"
+P0:"&nbsp;(1)Sample name: Sample name."
+P0:"&nbsp;(2)Raw reads: four rows are taken as a unit to calculate the total amount of read1 and read2 in raw data files."
+P0:"&nbsp;(3)Raw bases: (total raw reads) * (sequence length), calculating in G."
+P0:"&nbsp;(4)Error rate：The average error rate of all bases."
+P0:"&nbsp;(5)Q20：The percentage of bases with Phred score ≥20."
+P0:"&nbsp;(6)Q30：The percentage of bases with Phred score ≥30."
+P0:"&nbsp;(7)GC content：The percentage of G and C in the total bases."
+
+T0:"Introduction of Sequencing Data Format"
+P0:"The original raw data from Illumina platform are transformed to Sequenced Reads by base calling. Raw data are recorded in a FASTQ file, which contains sequence information (reads) and corresponding sequencing quality information. Every read in FASTQ format is stored in four lines as follows:"
+P0:"&nbsp;&nbsp;&nbsp;@HWI-ST1276:71:C1162ACXX:1:1101:1208:2458 1:N:0:CGATGT"
+P0:"&nbsp;&nbsp;&nbsp;NAAGAACACGTTCGGTCACCTCAGCACACTTGTGAATGTCATGGGATCCAT"
+P0:"&nbsp;&nbsp;&nbsp;+"
+P0:"&nbsp;&nbsp;&nbsp;#55???BBBBB?BA@DEEFFCFFHHFFCFFHHHHHHHFAE0ECFFD/AEHH"
+
+P0:"Line 1 begins with a '@' character and is followed by the Illumina Sequence Identifiers and an optional description."
+P0:"Illumina Sequence Identifier details:"
+S0:"data/hic.table3.identifier.txt","Table 3 Details of Illumina Sequence Identifier"
+P0:"Line 2 is the raw sequence read."
+P0:"Line 3 begins with a '+' character and is optionally followed by the same sequence identifier and description."
+P0:"Line 4 encodes the quality values for the sequence in Line 2, and must contain the same number of characters as there are bases in the sequence (Cock et al.)."
+
+T0:"Explanation of Sequencing Data Related"
+P0:"(1) The data deliverd is a compressed file in format of '.fq.gz'. Before data delivery, we will calculate the md5 value of each compressed file and please check it when you get the data. There are two ways to check the md5 value. In Linux environment, you can use 'md5sum -c <*md5.txt>' command under the data directory. In Windows environment, you can use a calibration tool e.g. hashmyfiles. If the md5 value of compressed file doesn't match with the one we provide in md5 file in data directory, the file may have been damaged during the transmitting procedure."
+P0:"(2) For paired-end (PE) sequencing, every sample should have 2 data flies (read1 file and read2 file). These 2 files have the same line number, you could use 'wc -l' command to check the line number in Linux environment. The line number divide by 4 is the number of reads."
+P0:"(3) The date size is the space occupied by the data in the hard disk. It's related to the format of disk and compression ratio. And it has no influence on the quantity of sequenced bases. So the size of read1 file may be unequal to the size of read2 file."
+P0:"(4) When customer’s samples need large amount of data e.g. whole genome sequencing data, we would use separate-lane sequencing strategy to make sure the quality of data. So it's possible that one sample has several parts sequencing data. For example, if sample 1 has two read1 files, sample1_L1_1.fq.gz and sample1_L2_1.fq.gz, that means this sample was sequenced on different lanes."
+P0:"(5) About the sequenced reads. The Index is normally in the middle of the adapter during the process of experimenting and sequencing except the special library. We can get the Read1 sequence and Read2 sequence by Index read. They are all the sequence of samples so that it's no necessary to dispose the beginning and end of reads in the downstream analysis(e.g. mapping)."
+P0:"(6) Ninety days after the data delivery, we will delete outdated data. So please keep your data properly. If you have any question or doubt, please contact us as soon as possible. Have a nice day!"
+
+T0:"References"
+P0:"Cock P.J.A. et al (2010). The Sanger FASTQ file format for sequences with quality scores, and the Solexa/Illumina FASTQ variants. Nucleic acids research 38, 1767-1771."
+P0:"Erlich Y.et al (2008). Alta-Cyclic: a self-optimizing base caller for next-generation sequencing.Nature Methods,5,679-682."
+P0:"Jiang L.C. et al (2011). Synthetic spike-in standards for RNA-seq experiments. Genome research 21, 1543-1551."

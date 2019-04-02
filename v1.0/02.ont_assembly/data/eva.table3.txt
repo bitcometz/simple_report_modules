@@ -1,0 +1,2 @@
+Category	BUSCO notation assessment results
+Percentage	C: 91% [D: 8.0%], F: 3.7%, M: 4.7%, n: XX

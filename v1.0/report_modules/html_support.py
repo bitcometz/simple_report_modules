@@ -399,6 +399,7 @@ def add_sections(name, herfs, sects, num):
                 figure_path = arr2[0].strip('\"')
                 figure_name = arr2[1].strip('\"')
                 txt += add_figure(figure_path, figure_name)
+                txt += add_blank_line(1)
 
             elif sects[name][ti].startswith("S0"):
                 arr2 = arr[1].split(",")
@@ -568,7 +569,7 @@ def cover(project_infos):
 
 				<p style ="text-align:center;padding-top:16%;font-size:15px">
 				<h4 >Report Date：{Report_Date}</h4>
-				<h4>项目负责：北京诺禾致源科技股份有限公司Denovo业务线</h4>
+				<h4>{Project_principals}</h4>
 				<!--<hr style="margin-top: 22%; height:1px;border:none;border-top:1px dashed">-->
 				</p>
 			</div>

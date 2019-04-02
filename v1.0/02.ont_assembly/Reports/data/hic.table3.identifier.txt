@@ -1,0 +1,12 @@
+Identifier	Meaning
+HWI-ST1276	Instrument – unique identifier of the sequencer
+71	run number – Run number on instrument
+C1162ACXX	FlowCell ID – ID of flowcell
+1	LaneNumber – positive integer
+1101	TileNumber – positive integer
+1208	X – x coordinate of the spot. Integer which can be negative
+2458	Y – y coordinate of the spot. Integer which can be negative
+1	ReadNumber - 1 for single reads; 1 or 2 for paired ends
+N	whether it is filtered - NB： Y if the read is filtered out, not in the delivered fastq file, N otherwise
+0	control number - 0 when none of the control bits are on, otherwise it is an even number
+CGATGT	Illumina index sequences

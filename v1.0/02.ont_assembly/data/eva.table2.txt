@@ -1,0 +1,3 @@
+Category	# Prots	%completeness
+complete	205	82.66
+complete + partial	240	96.77
