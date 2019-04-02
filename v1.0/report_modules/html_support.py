@@ -549,7 +549,7 @@ def cover(project_infos):
 		<div class="col-md-9" role="main" id="main">
 			<!--封面-->
 
-			<p style ="text-align:left;padding-top:2%;padding-left:3%;font-size:15px">Project ID：{Project_ID}
+			<p id="projectid" style ="text-align:left;padding-top:2%;padding-left:3%;font-size:15px">Project ID：{Project_ID}
 			<br/>
 			Report ID：{Report_ID}
 			<br/>
@@ -628,8 +628,8 @@ def body_end():
     txt = '''
 
 		<div class="col-md-2 hidden-print" title="TOP">
-		<p><a href="report.html" target="_top">
-			<button   type="button" class="btn" style="position: fixed;top: 55px;right: 0.5%" href="report.html" target="_top"><i class="fa fa-arrow-up fa-1x" aria-hidden="true"></i></button>
+		<p><a href="#projectid" target="_top">
+			<button   type="button" class="btn" style="position: fixed;top: 5px;right: 0.5%" href="report.html" target="_top"><i class="fa fa-arrow-up fa-1x" aria-hidden="true"></i></button>
 		</a></p>
 		</div>
 
