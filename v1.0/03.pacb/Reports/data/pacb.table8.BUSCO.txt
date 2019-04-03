@@ -1,0 +1,5 @@
+Species	BUSCO notation assessment results
+species1	C: 91% [D: 8.0%], F: 3.7%, M: 4.7%, n: XX
+species2	C: 91% [D: 8.0%], F: 3.7%, M: 4.7%, n: XX
+species3	C: 91% [D: 8.0%], F: 3.7%, M: 4.7%, n: XX
+species4	C: 91% [D: 8.0%], F: 3.7%, M: 4.7%, n: XX

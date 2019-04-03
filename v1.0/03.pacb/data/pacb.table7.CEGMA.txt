@@ -1,0 +1,5 @@
+species	#Prots(complete)	%completeness(complete)	#Prots(complete+partial)	%completeness(complete+partial)
+XX	205	82.66	240	96.77
+XX	205	82.66	240	96.77
+XX	205	82.66	240	96.77
+XX	205	82.66	240	96.77

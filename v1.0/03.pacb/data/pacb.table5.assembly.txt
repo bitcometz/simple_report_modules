@@ -1,0 +1,3 @@
+Sample	total length	total num	max length	N50 length	N50 num	N90 length	N90 num
+contig	472418210	246	13951448	7309885	24	1555463	81
+scaffold	472664564	129	33184058	20498577	10	12228650	22

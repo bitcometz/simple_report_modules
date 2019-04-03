@@ -1,0 +1,5 @@
+Sample	Polymerase Read Bases(G)	Polymerase Reads	Polymerase Read Length(mean)	Polymerase Read N50
+C12	10.0	1564687	6391	12058
+C13	10.0	1564687	6391	12058
+C14	10.0	1564687	6391	12058
+C15	10.0	1564687	6391	12058

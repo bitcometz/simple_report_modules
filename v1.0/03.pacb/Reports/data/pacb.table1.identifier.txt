@@ -1,0 +1,12 @@
+Identifier	Meaning
+EAS139	Unique instrument name
+136	Run ID
+FC706VJ	Flowcell ID
+2	Flowcell lane number
+2104	Tile number within the flowcell lane
+15343	'x'-coordinate of the cluster within the tile
+197393	'y'-coordinate of the cluster within the tile
+1	Member of a pair, 1 or 2 (paired-end or mate-pair reads only)
+Y	Y if the read fails filter (read is bad), N otherwise
+18	0 when none of the control bits are on, otherwise it is an even number
+ATCACG	Index sequence

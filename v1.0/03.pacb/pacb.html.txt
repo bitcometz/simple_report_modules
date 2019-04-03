@@ -1,0 +1,162 @@
+[pros]
+Project_ID=Project_IDXXXXXXXXX
+Project_Name=Plant and Animal De novo assembly
+Report_Date=2019-04-02
+Report_ID=Plant and Animal De novo assembly-2019-04-02
+Title_Name=Plant and Animal De novo assembly Report
+Project_principals=Novogene Overseas Department
+
+[bars]
+# 主要设置左侧的栏目，栏目名字=栏目图片相对路径,子栏目1名字，子栏目2名字(没有子栏目则为标记为"None"). 注意逗号是用英文输入的逗号
+Background="static/image/sidebar_icon_active_1.png","PacBio SMRT Sequencing"
+Experimental Procedure="static/image/sidebar_icon_active_2.png","DNA Quantification & Qualification","Illumina DNA Library preparation","Pacbio DNA Library preparation","Sequencing"
+Bioinformatics Analysis Pipeline="static/image/sidebar_icon_active_3.png","None"
+Analysis Result="static/image/sidebar_icon_active_4.png","Illumina Raw Data","Illumina Data quality control","PacBio Raw Data Processing and Data Statistics","PacBio Polymerase Read Statistics","PacBio Subreads Statistics","PacBio long-read de novo assembly","Error Correction of Assembly with Illumina Short-reads Data","Assembly result","Genome content","CEGMA evaluation","BUSCO evaluation"
+Reference="static/image/sidebar_icon_active_5.png","None"
+
+[paras]
+# 主要设置每个栏目或者子栏目对应的内容部分。按顺序给出
+# 通过最前面的标记不同的元素: T0:代表栏目的开始，一段文字(P0:)，一个图片(F0)，图片图注(F1)，表格(S0)，表格说明(S1)
+# 多个图片(MF0:"图片名字","图片1路径":"图片1样品名字","图片2路径":"图片2样品名字"...)
+# 一行代表一段文字
+
+T0:"Background"
+P0:"With the development of long-read sequencing technologies, single-molecule sequencing platforms(Pacific Biosciences) and nanopore-based platforms(Oxford Nanopore Technology) can sequence long DNA fragments and provide long reads that could be used in de novo whole-genome assembly. Using efficient algorithms, these methods could provide high-quality assemblies in terms of contiguity and completeness of repetitive regions."
+P0:"With de novo sequencing, the genome map for a species could be generated, providing a valuable reference sequence for phylogenetic studies, analysis of species diversity, mapping of specific traits and genetic markers, and other genomics research."
+
+T0:"PacBio SMRT Sequencing"
+P0:"Recently, with the development of high-throughput sequencing technology, the third generation sequencing platforms have become new tools of genome research. The main disadvantages of the second generation sequencing technology are, reads are too short and may match with many different regions of the genome and are not unique to any specific region of the sequence. However, the third generation sequencing technology, represented by PacBio, has effectively solved this problem. PacBio long-read sequencing enabled by SMRT Sequencing technology, harnesses the natural process of DNA replication and enables real-time observation of DNA synthesis. With this unique technology, we equip innovative scientists and deliver the results needed to drive genetic discovery."
+P0:"SMRT Sequencing is built upon two key innovations: zero-mode waveguides (ZMWs) and phospholinked nucleotides. ZMWs allow light to illuminate only the bottom of a well in which a DNA polymerase/template complex is immobilized. Phospholinked nucleotides allow observation of the immobilized complex as the DNA polymerase produces a completely natural DNA strand."
+P0:"The PacBio Sequel system with greater capacity, longer reads, lower cost and smaller footprint, has be widely used in de novo whole-genome assembly."
+
+T0:"Experimental Procedure"
+P0:"Working Flow:"
+F0:"data/pacb.figure1.flow.png","Figure 1 Schematic diagram of experimental flow"
+
+T0:"DNA Quantification & Qualification"
+P0:"1) DNA degradation and contamination were examined on 1% agarose gels."
+P0:"2) DNA purity was checked using the NanoPhotometer® spectrophotometer (IMPLEN, CA, USA)."
+P0:"3) DNA concentration was measured using Qubit® DNA Assay Kit in Qubit® 2.0 Flurometer (Life Technologies, CA, USA)."
+P0:"4) DNA size was examined on pulse field electrophoresis."
+
+T0:"Illumina DNA Library preparation"
+P0:"Total amount of 1.0μg DNA per sample was used as input material for library preparations with NEBNext® DNA Library Prep Kit following manufacturer's recommendations and indices were added to each sample. The genomic DNA is randomly fragmented to size of 350bp, and then DNA fragments were end polished, A-tailed, and ligated with the NEBNext adapters of Illumina sequencing, and further PCR enriched with primers of P5 and P7 oligos. The PCR products as final construct of the libraries were purified (AMPure XP system), followed by quality control test that included size distribution by Agilent 2100 Bioanalyzer (Agilent Technologies, CA, USA), and molarity measurement using real-time PCR. The flowchart below depicts the workflow of library preparation."
+F0:"data/pacb.figure2.lib.png","Figure 2 Library construction workflow (Illumina)"
+
+T0:"Pacbio DNA Library preparation"
+P0:"As shown in the figure 4, the first step in the generation of a SMRTbell library is production of appropriately-sized double-stranded DNA fragments. These fragments can be generated by random shearing of DNA, or by amplification of target regions of interest. The SMRTbell library itself is produced by ligating universal hairpin adapters onto double-stranded DNA fragments. The hairpin dimers formed during this process are removed at the end of the protocol using a magnetic bead purification step with size-selective conditions. Adapter dimers are also efficiently removed using PacBio’s MagBead kit. The final step of the protocol is to remove failed ligation products through the use of exonucleases. After the exonuclease and AMPure PB purification steps, sequencing primer is annealed to the SMRTbell templates, followed by binding of the sequence polymerase to the annealed templates."
+F0:"data/pacb.figure3.lib.png","Figure 3 Library construction workflow (PacBio)"
+
+T0:"Sequencing"
+P0:"Pair-end sequencing was performed on Illumina® NovaSeq platform, with the read length of 150 bp at each end. PacBio SMRT sequencing was performed on PacBio Sequel platform."
+
+T0:"Bioinformatics Analysis Pipeline"
+F0:"data/pacb.figure4.flow.png","Figure 4 Bioinformatics analysis workflow"
+
+T0:"Analysis Result"
+T0:"Illumina Raw Data"
+P0:"The original fluorescence images obtained from high throughput sequencing platforms are transformed to short reads by base calling. These short reads (Raw data) are recorded in FASTQ format, which contains sequence information (reads) and corresponding sequencing quality information.Every read in FASTQ format is stored in four lines as follows:"
+P0:"&nbsp;&nbsp;&nbsp;@EAS139:136:FC706VJ:2:2104:15343:197393 1:Y:18:ATCACG"
+P0:"&nbsp;&nbsp;&nbsp;GCTCTTTGCCCTTCTCGTCGAAAATTGTCTCCTCATTCGAAACTTCTCTGT"
+P0:"&nbsp;&nbsp;&nbsp;+"
+P0:"&nbsp;&nbsp;&nbsp;@@CFFFDEHHHHFIJJJ@FHGIIIEHIIJBHHHIJJEGIIJJIGHIGHCCF"
+P0:"&nbsp;&nbsp;&nbsp;Line 1 begins with a '@' character which is followed by a sequence identifier and an optional description."
+P0:"&nbsp;&nbsp;&nbsp;Line 2 shows the sequenced bases."
+P0:"&nbsp;&nbsp;&nbsp;Line 3 begins with a '+' character and is optionally followed by the same sequence identifier."
+P0:"&nbsp;&nbsp;&nbsp;Line 4 encodes the sequencing quality for each base in line 2, and contain the same number of characters as bases in line 2."
+S0:"data/pacb.table1.identifier.txt","Table 1 Information of Illumina sequence identifiers"
+
+T0:"Illumina Data Quality Control"
+P0:"Raw data obtained from sequencing contains adapter contamination and low-quality reads. These sequencing artifacts may increase the complexity of downstream analyses, and therefore, we utilize quality control steps to remove them. Consequently, all the downstream analyses are based on the clean reads.The quality control steps are as follows:"
+P0:"1) Discard the paired reads when either read contains adapter contamination;"
+P0:"2) Discard the paired reads when uncertain nucleotides (N) constitute more than 10 percent of either read;"
+P0:"3) Discard the paired reads when low quality nucleotides (base quality less than 5, Q ≤ 5) constitute more than 50 percent of either read."
+P0:"Consistent with the Illumina platform sequencing features, for PE data, the error rate required to be below 0.1%. The results are shown in Table 2."
+S0:"data/pacb.table2.summary.txt","Table 2 Statistics of sequencing data(Illumina)"
+S1:"The details for the sequencing data statistics are as follows:"
+S1:"(1) Sample: Sample name."
+S1:"(2) Raw Base(bp): The output of raw data calculated by the number and length of sequence (in bp)."
+S1:"(3) Clean Base(bp): The valid data output of sequence (in bp) after filtering low quality reads, calculated by the number and length of sequences in clean data."
+S1:"(4) Effective Rate(%): The ratio of clean data to raw data."
+S1:"(5) Error Rate(%): Overall error rate of base."
+S1:"(6) Q20 and Q30 (%): The percentage of bases with higher Phred score than 20 and 30 in total bases."
+S1:"(7) GC Content (%): The percentage of G and C in total bases."
+
+T0:"PacBio Raw Data Processing and Data Statistics"
+P0:"In real-time single molecule sequencing technology (SMRT), the original sequencing data will contain 0, 1 or more than 2 molecular template information. However, 0 or more than 2 molecular templates will cause great interference to the next step bioinformatics analysis. Thus, we use the software SMRTlink to filter and process original sequencing results, with minLength 0, minReadScore 0.8 as parameters."
+
+T0:"PacBio Polymerase Read Statistics"
+P0:"Polymerase read is a sequence of nucleotides incorporated by the DNA polymerase while reading a template, such as a circular SMRTbell™ template in Sequel system, which are trimmed to the high quality region and include bases from adaptors, as well as potentially multiple passes around a circular template. Polymerase reads are most useful for quality control of the instrument run. Finally, we got the polymerase read statistical results as follows."
+S0:"data/pacb.table3.polymerase.txt","Table 3 Polymerase Read Statistics"
+S1:"The details for the sequencing data statistics are as follows:"
+S1:"(1) Sample:Samlpe name;"
+S1:"(2) Polymerase Read Bases(G):The total base pair of all polymerase read;"
+S1:"(3) Polymerase Reads:The number of high quality polymerase reads;"
+S1:"(4) Polymerase Read Length (mean):The mean trimmed read length of polymerase reads;"
+S1:"(5) Polymerase Read N50:50% of all polymerase reads are longer than this value."
+P0:"The distribution of polymerase Read length is shown in Figure 5:"
+MF0:"Polymerase read length distribution","data/pacb.figure5.polymerase.sample1.png":"sample1","data/pacb.figure5.polymerase.sample2.png":"sample2","data/pacb.figure5.polymerase.sample3.png":"sample3",data/pacb.figure5.polymerase.sample4.png":"sample4"
+
+T0:"PacBio Subreads Statistics"
+P0:"Each polymerase read is partitioned to form one or more subreads, which contain sequence from a single pass of a polymerase on a single strand of an insert within a SMRTbell™ template and no adapter sequences. The subreads contain the full set of quality values and kinetic measurements. One example of subreads statistics information is shown in the Table 4."
+S0:"data/pacb.table4.subread.txt","Table 4 Subread Statistics"
+S1:"The details for the sequencing data statistics are as follows:"
+S1:"(1) Sample: Samlpe name;"
+S1:"(2) Subreads base(G): The number base pair of all subreads;"
+S1:"(3) Subreads number: The number of high quality subreads;"
+S1:"(4) Average subreads length: The Average read length of all subreads;"
+S1:"(5) N50: 50% of all subreads reads are longer than the value."
+P0:"The distribution of subread length is shown in Figure 6:"
+MF0:"Polymerase read length distribution","data/pacb.figure6.subread.sample1.png":"sample1","data/pacb.figure6.subread.sample2.png":"sample2","data/pacb.figure6.subread.sample3.png":"sample3","data/pacb.figure6.subread.sample4.png":"sample4"
+
+T0:"PacBio long-read de novo assembly"
+P0:"FALCON was used for assembly, here is the procedure of the algorithms."
+P0:"1) The long reads from Pacbio platform was input for the first step of de novo assembly. According to the insertions, deletion and sequencing error rate of base pair, the long reads from Pacbio platform was perform error correction to obtain pre-assemble reads. Generally, after error correction, the pre-assemble reads can achieve accuracies up to 99.999%."
+P0:"2) Through the overlap among PacBio long reads (Mean read length 10～15kb, longest reads >40kb), the error corrected subreads were performed by the consensus algorithm called Overlap-Layout-Consensus (DBG2OLC) to obtain consensus sequence."
+P0:"3) The error correction of preceding assembly was performed by consensus–calling algorithm Quiver. And then, paired-end clean reads from Illumina platform were preformed further correction using Pilon. The strict error correction procedure could improve the accuracy of assembly result and offer high quality consensus sequence which will be used in the subsequent scaffolding."
+F0:"data/pacb.figure7.flow.png","Figure 7 PacBio Assembly Workflow"
+
+T0:"Error Correction of Assembly with Illumina Short-reads Data"
+P0:"Paired-end clean reads obtained from Illumina platform were aligned to the assembly using BWA. Post-processing error correction and conflict resolution of the assembly was performed using Pilon."
+
+T0:"Assembly result"
+P0:"The final assembly came with a contig N50 of 41.7kb, scaffold N50 of 5.2 Mb which covered 2.52 Gb of the genome."
+S0:"data/pacb.table5.assembly.txt","Table 5 Statistics of contig/scaffold assembly result"
+S1:"(1) Total length: The total length of contigs/scaffold in the assembly."
+S1:"(2) Max length: The length of the longest contig in the assembly."
+S1:"(3) Total number: The number of contigs in the assembly."
+S1:"(4) N50 length/number: The length L of the contig for which 50% of all bases in the final contigs are of length greater than L."
+S1:"(5) N90 length/number: The length L of the contig for which 90% of all bases in the final contigs are of length greater than L."
+S1:"Note: The contig statistics only count contig after scaffolding which length is longer than 100 bp."
+
+T0:"Genome content"
+S0:"data/pacb.table6.gc.txt","Table 6 Statistics of genome content"
+S1:"GC content of the genome without N."
+
+T0:"CEGMA evaluation"
+P0:"<a href=http://korflab.ucdavis.edu/datasets/cegma>CEGMA</a> (Core Eukaryotic Genes Mapping Approach) using a highly reliable set of 248 conserved protein families that occur in a wide range of eukaryotic to evaluate the genome assembly."
+S0:"data/pacb.table7.CEGMA.txt","Table 7 CEGMA result of genome"
+S1:"(1) Complete: core gene >70% ﻿number of 248 ultra-conserved CEGs present in genome;"
+S1:"(2) Complete+partial: core gene ﻿number of 248 ultra-conserved CEGs present in genome;"
+S1:"(3) #Prots: core gene number of 248 ultra-conserved CEGs present in genome;"
+S1:"(4) %completeness: percentage of 248 ultra-conserved CEGs."
+
+
+
+T0:"BUSCO evaluation"
+P0:"<a href=https://busco.ezlab.org>BUSCO</a> (Benchmarking Universal Single-Copy Orthologs) using single-copy orthologs gene database, with blastn、augustus and hmmer software to evaluate the integrity of genome assembly."
+S0:"data/pacb.table8.BUSCO.txt","Table 8 BUSCO result of genome"
+S1:"BUSCO notation assessment results: "
+S1:"C: Complete Single-Copy BUSCOs"
+S1:"D: Complete Duplicated BUSCOs"
+S1:"F: Fragmented BUSCOs"
+S1:"M: Missing BUSCOs"
+S1:"n: Total BUSCO groups searched"
+
+T0:"Reference"
+P0:"1.Eid, John, et al. Real-time DNA sequencing from single polymerase molecules. 2009, Science."
+P0:"2.Lieberman-Aiden E, van Berkum N L, Williams L, et al. Comprehensive mapping of long-range interactions reveals folding principles of the human genome[J]. science, 2009, 326(5950): 289-293."
+P0:"3.Cock, P.J.A., Fields, C.J., Goto, N., Heuer, M.L., and Rice, P.M. (2010). The Sanger FASTQ file format for sequences with quality scores, and the Solexa/Illumina FASTQ variants. Nucleic acids research 38, 1767-1771."
+P0:"4.Hansen, K.D., Brenner, S.E., and Dudoit, S. (2010). Biases in Illuminatranscriptome sequencing caused by random hexamer priming. Nucleic acids research 38, e131-e131."
+P0:"5.Jiang, L., Schlesinger, F., Davis, C.A., Zhang, Y., Li, R., Salit, M., Gingeras, T.R., and Oliver, B.(2011). Synthetic spike-in standards for RNA-seq experiments. Genome research 21,1543-1551."
+P0:"6.Li H, Durbin R: Fast and accurate short read alignment with Burrows-Wheeler transform. Bioinformatics 2009, 25(14):1754-1760."
