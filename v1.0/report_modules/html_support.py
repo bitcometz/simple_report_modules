@@ -213,7 +213,7 @@ def add_paragraphs(paragraphs):
 
 def add_figure(path, name):
     txt = '''
-		<div class="content_img"><img src="{path}" width="450"></div>
+		<div class="content_img"><img src="{path}" width="80%"></div>
 		<h6>{name}</h6>
 
 '''.format(path=path, name=name)
