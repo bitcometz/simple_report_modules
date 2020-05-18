@@ -31,13 +31,16 @@ S1:"(1)Species：XX 物种；","(2)D：Complete Duplicated BUSCOs; F：Fragmente
 
 
 #多个图片(MF0:"图片名字","图片1路径":"图片1样品名字","图片2路径":"图片2样品名字"...)
+
 MF0:"Fig.6.1 heatmap of beta diversity distance for ASVs.","./data/pictures/01.ASVs/unweighted_unifrac_distance_matrix_qza/distance-matrix.tsv.png":"ASVs_unweighted_unifrac_distance_matrix_qza","./data/pictures/01.ASVs/weighted_unifrac_distance_matrix_qza/distance-matrix.tsv.png":"ASVs_weighted_unifrac_distance_matrix_qza","./data/pictures/01.ASVs/jaccard_distance_matrix_qza/distance-matrix.tsv.png":"ASVs_jaccard_distance_matrix_qza","./data/pictures/01.ASVs/bray_curtis_distance_matrix_qza/distance-matrix.tsv.png":"ASVs_bray_curtis_distance_matrix_qza"
 
 #超链接
+
 H0:"./data/hyperlinks/stats-dada2_qzv/index.html","   Data summaries"
 
 #多个超链接
 #多个链接(MH0:"图片名字:路径","图片名字:路径")
+
 MH0:"ASVs_max_depth_6000:./data/hyperlinks/01.ASVs/max_depth_6000/alpha-rarefaction/index.html","ASVs_max_depth_8000:./data/hyperlinks/01.ASVs/max_depth_8000/alpha-rarefaction/index.html",
 
 
@@ -46,7 +49,8 @@ NOTE
 
 最终的结果会放在Reports文件夹下
 
-华为云的例子路径如下：
-/HWNAS12/RAD/zhangjinbo/01.release/00.reports/00.examples
+例子路径如下：
+/ifs/TJPROJ3/GB_MICRO/USER/zhangjinbo/test/04.reports/00.illumin_denovo/00.V6.0/HW_out_3/Reports_X202SC19112444-Z01_2020-05-08
 
-下载本页的内容 ，请点击右上角的绿色框(Clone or Download)
+命令：
+/ifs/TJPROJ3/RAD/liji/00.public/software/anaconda2/bin/python2 /ifs/TJPROJ3/GB_MICRO/USER/zhangjinbo/auto_analysis/auto_html/report.py report.html.txt ./
