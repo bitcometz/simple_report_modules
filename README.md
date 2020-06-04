@@ -22,7 +22,8 @@ P0:"Nanopore 测序即纳米孔测序，其原理是：纳米孔蛋白  作为�
 
 F0:"static/image/p1.png","图 1 Nanopore 测序原理"
 
-#F1:"路径", "图片名字",
+#F1:"路径", "图片名字"
+
 F1:"data/pipeline.png","Figure 1.1 Pipeline of analysis"
 
 #F3:"路径", "图片名字", "widthxheight"
@@ -33,6 +34,7 @@ F3:"data/Fig.1.2.png","Figure 1.2 Software versions","1000x1000"
 P0:"对Nanopore 测序得到的原始数据采用软件NanoPlot 进行质控过滤异常值，我们对 下机得到的reads 统计结果见表1，质控后的reads 的统计结果见"
 
 #P1 没有行距
+
 P1:"2.1 可以设置X，Y轴的名字，图片的名字，小图例放置的位置(上下左右)。"
 P1:"2.2 提供配色方案选择，提供形状方案选择(点图)。"
 P1:"2.3 同一个图里面存在其他元素(样品的名字，或者韦恩图存在柱状图，Alpha分布图存在Pvalue值等)，可以选择其显示或者不显示。"
