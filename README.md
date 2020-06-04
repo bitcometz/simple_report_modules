@@ -21,7 +21,9 @@ T0:"Nanopore 测序简介"
 P0:"Nanopore 测序即纳米孔测序，其原理是：纳米孔蛋白  作为生物传感器，插入由合成聚合物形成的膜中。此外，核酸分子会与马达蛋白（Motor Proted...................(一段的内容为一行，以双引号结束)"
 
 F0:"static/image/p1.png","图 1 Nanopore 测序原理"
+
 #F3:"路径", "图片名字", "widthxheight"
+
 F3:"data/Fig.1.2.png","Figure 1.2 Software versions","1000x1000"
 
 
